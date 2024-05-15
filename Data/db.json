@@ -1,0 +1,53 @@
+{
+    "candidat": [
+        {
+            "id": 1,
+            "name": "EL MALKI Zineb",
+            "title": "full stack developer",
+            "technologies": [
+                "Java",
+                "Angular"
+            ],
+            "email": "zinebelmalki@gmail.com",
+            "imageUrl": "/assets/societes/00000449.png",
+            "pays": "Maroc"
+        },
+        {
+            "id": 2,
+            "name": "GMIH Soukain",
+            "title": "full stack developer",
+            "technologies": [
+                ".Net",
+                "Angular"
+            ],
+            "email": "gmihsoukaina@gmail.com",
+            "imageUrl": "/assets/societes/00000449.png",
+            "pays": "Maroc"
+        },
+        {
+            "id": 3,
+            "name": "HADDOUDI Abdelkarim",
+            "title": "full stack developer",
+            "technologies": [
+                "JAVA",
+                "Angular",
+                "python"
+            ],
+            "email": "abdelkarimhaddoudi@gmail.com",
+            "imageUrl": "/assets/societes/00000449.png",
+            "pays": "Egypt"
+        },
+        {
+            "id": 4,
+            "name": "EL MALKI Zineb",
+            "title": "full stack developer",
+            "technologies": [
+                "Java",
+                "Angular"
+            ],
+            "email": "zinebelmalki@gmail.com",
+            "imageUrl": "/assets/societes/00000449.png",
+            "pays": "Maroc"
+        }
+    ]
+}

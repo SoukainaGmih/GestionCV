@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="formgrid grid">
+        <div class="field col">
+            <input id="searchname" type="text" [(ngModel)]="keyword" placeholder="name"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col">
+            <input id="searchpays" type="text" placeholder="pays" [(ngModel)]="keypays"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <p-button icon="pi pi-search" (click)="keyword ? searchCandidats() :  searchPays()" [rounded]="true"
+            [text]="true" />
+    </div>
+
+
+    <div class="grid" *ngIf="candidats as candidatList">
+
+        <p-card *ngFor="let candidat of candidatList" header="{{candidat.name}}" subheader="{{candidat.title}}"
+            [style]="{ width: '300px', height : '600px' }">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="{{candidat.imageUrl}}" />
+            </ng-template>
+            <div>
+                <!-- <p *ngFor="let techno of" > JAVA, Angular</p> -->
+                <p>{{candidat.technologies}}</p>
+
+            </div>
+            <div>
+                <p>{{candidat.email}}</p>
+            </div>
+            <div>
+                <i class="pi pi-map-marker"><span>&nbsp; {{candidat.pays}}</span></i>
+            </div>
+            <ng-template pTemplate="footer">
+                <div class="flex gap-3 mt-1">
+                    <p-button label="Profil" severity="warning" class="w-full" styleClass="w-full" />
+                </div>
+            </ng-template>
+        </p-card>
+
+
+
+
+    </div>
+</div>
