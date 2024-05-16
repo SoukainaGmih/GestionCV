@@ -1,0 +1,28 @@
+<!-- <p-menubar [model]="items" class="text-2xl">
+    <ng-template pTemplate="start">
+        <img src="https://www.primefaces.org/primeng-v14-lts/assets/showcase/images/primeng-logo-dark.svg" height="40" class="mr-2">
+    </ng-template>
+    <button pButton pRipple type="button" label="Join" class="p-button-raised p-button-text" [routerLink]="['/login']"></button>
+    <button pButton pRipple type="button" label="Secondary" class="p-button-raised p-button-secondary p-button-text" [routerLink]="['/sginup']"></button>
+</p-menubar> -->
+
+<header class="header" id="header">
+    <nav class="navbar container">
+       <a href="#" class="brand">LogoName</a>
+       <div class="burger" id="burger">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+       </div>
+       <div class="menu" id="menu">
+          <ul class="menu-inner">
+             <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
+             <li class="menu-item"><a href="#" class="menu-link">Condidat</a></li>
+             <li class="menu-item"><a href="#" class="menu-link">Company</a></li>
+             <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
+             <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li>
+          </ul>
+       </div>
+       <a [routerLink]="['/sginup']" class="menu-block">Join us</a>
+    </nav>
+ </header>
