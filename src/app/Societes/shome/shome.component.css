@@ -1,0 +1,30 @@
+img {
+    min-width: 100%;
+    min-height: 50%;
+    width: 20%;
+    height: 50%;
+    object-fit: cover;
+    /* border-radius: 50%; */
+}
+
+
+
+
+.grid {
+    margin: 3%;
+    justify-content: space-between;
+
+
+}
+
+p-card {
+    padding: 1%;
+    text-align: center;
+
+
+}
+
+.btnP {
+    margin-top: 10%;
+
+}
