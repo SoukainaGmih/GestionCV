@@ -1,93 +1,158 @@
 {
-  "candidates": [
-    {
-      "id": 1,
-      "name": "EL MALKI Zineb",
-      "email": "zinebelmalki@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "Java",
-        "Angular"
+    "candidat": [
+      {
+        "id": "1",
+        "name": "EL MALKI Zineb",
+        "email": "zinebelmalki@gmail.com",
+        "title": "full stack developer",
+        "technologies": [
+          "Java",
+          "Angular"
+        ],
+        "imageUrl": "/assets/societes/00000449.png",
+        "pays": "Maroc",
+        "role": "Candidate",
+        "skills": [
+          {
+            "id": "1",
+            "title": "Java",
+            "level": "Beginner"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "name": "GMIH Soukain",        
+        "email": "gmihsoukaina@gmail.com",
+        "title": "full stack developer",
+        "technologies": [
+          ".Net",
+          "Angular"
+        ],
+        "imageUrl": "/assets/societes/00000449.png",
+        "pays": "Maroc",
+        "role": "Candidate",
+        "skills": [
+          {
+            "id": "1",
+            "title": ".net",
+            "level": "Beginner"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "name": "HADDOUDI Abdelkarim",        
+        "email": "abdelkarimhaddoudi@gmail.com",
+        "title": "full stack developer",
+        "technologies": [
+          "JAVA",
+          "Angular",
+          "python"
+        ],
+        "imageUrl": "/assets/societes/00000449.png",
+        "pays": "Egypt",
+        "role": "Candidate",
+        "skills": [
+          {
+            "id": "1",
+            "title": "Java",
+            "level": "Beginner"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "name": "EL MALKI Zineb",        
+        "email": "zinebelmalki@gmail.com",
+        "title": "full stack developer",
+        "technologies": [
+          "Java",
+          "Angular"
+        ],
+        "imageUrl": "/assets/societes/00000449.png",
+        "pays": "Maroc",
+        "role": "Candidate",
+        "skills": [
+          {
+            "id": "1",
+            "title": "Java",
+            "level": "advanced"
+          }
+        ]
+      }
+    ],
+    "companies": [
+        {
+          "name": "Tech Corp",
+          "email": "info@techcorp.com",
+          "role": "Company",
+          "industry": "Technology"
+        },
+        {
+          "name": "Marketing Solutions Ltd.",
+          "email": "contact@marketingsolutions.com",
+          "role": "Company",
+          "industry": "Marketing"
+        },
+        {
+          "name": "Finance First Inc.",
+          "email": "support@financefirst.com",
+          "role": "Company",
+          "industry": "Finance"
+        },
+        {
+          "id": "65a6",
+          "name": "",
+          "email": "soukaina2387@gmail.com",
+          "password": "",
+          "role": "company"
+        },
+        {
+          "id": "2888",
+          "name": "test",
+          "email": "test2@gmail.com",
+          "password": "",
+          "role": "company"
+        },
+        {
+          "id": "dea2",
+          "name": "test",
+          "email": "test3@gmail.com",
+          "password": "",
+          "role": "company"
+        }
       ],
-      "imageUrl": "",
-      "pays": "Maroc",
-      "role": "Candidate"
-    },
-    {
-      "id": 2,
-      "name": "HADDOUDI Abdelkarim",
-      "email": "abdelkarimhaddoudi@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "JAVA",
-        "Angular",
-        "python"
-      ],
-      "imageUrl": "",
-      "pays": "Egypt",
-      "role": "Candidate"
-    },
-    {
-      "id": 3,
-      "name": "GMIH Soukain",
-      "email": "gmihsoukaina@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        ".Net",
-        "Angular"
-      ],
-      "imageUrl": "",
-      "pays": "Maroc",
-      "role": "Candidate"
-    },
-    {
-      "id": "897a",
-      "name": "",
-      "email": "",
-      "password": "",
-      "role": "candidate"
-    }
-  ],
-  "companies": [
-    {
-      "name": "Tech Corp",
-      "email": "info@techcorp.com",
-      "role": "Company",
-      "industry": "Technology"
-    },
-    {
-      "name": "Marketing Solutions Ltd.",
-      "email": "contact@marketingsolutions.com",
-      "role": "Company",
-      "industry": "Marketing"
-    },
-    {
-      "name": "Finance First Inc.",
-      "email": "support@financefirst.com",
-      "role": "Company",
-      "industry": "Finance"
-    },
-    {
-      "id": "65a6",
-      "name": "",
-      "email": "soukaina2387@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "id": "2888",
-      "name": "test",
-      "email": "test2@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "id": "dea2",
-      "name": "test",
-      "email": "test3@gmail.com",
-      "password": "",
-      "role": "company"
-    }
-  ],
+    "annonce": [
+      {
+        "id": "1",
+        "title": "annonce title",
+        "description": "annonce description",
+        "technology": "Java , .net",
+        "startdate": "07/02",
+        "createdat": "01/02",
+        "societename": "societe name"
+      },
+      {
+        "id": "2cfa",
+        "title": "java developer",
+        "description": "java developer description",
+        "technology": "java",
+        "contrat": null,
+        "startdate": "2024-06-01",
+        "createdat": "2024-05-15",
+        "societename": "jobintech"
+      },
+      {
+        "id": "1958",
+        "title": "data analyst",
+        "description": "data analyst description",
+        "technology": "python, sql ",
+        "contrat": null,
+        "startdate": "2024-06-01",
+        "createdat": "2024-05-18",
+        "societename": "capgemini"
+      }
+    ],
   "loggedUser": {}
-}
+  }

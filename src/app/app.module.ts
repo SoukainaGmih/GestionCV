@@ -13,8 +13,9 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnnonceComponent } from './Societes/annonce/annonce.component';
+import { ProfilComponent } from './Candidat/profil/profil.component';
 
 
 import { MenubarModule } from 'primeng/menubar';
@@ -39,6 +40,7 @@ import { HeaderCompanyComponent } from './Societes/header-company/header-company
     ChomeComponent,
     ShomeComponent,
     AnnonceComponent,
+    ProfilComponent,
     HeaderCondidatComponent,
     MainVisiteurComponent,
     HeaderCompanyComponent
@@ -54,7 +56,8 @@ import { HeaderCompanyComponent } from './Societes/header-company/header-company
     InputIconModule,
     IconFieldModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
