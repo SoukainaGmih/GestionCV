@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -139,5 +140,95 @@ export class HeaderComponent implements OnInit {
         }
     ];
 }
+
+
+/* loggedUser: any;
+constructor(private router: Router) {
+  const localUser = localStorage.getItem('loggedUser');
+  if(localUser != null) {
+    this.loggedUser = JSON.parse(localUser);
+  }
+} */
+
+/* loggedUser: any;
+
+constructor(private router: Router) {
+  this.getLoggedUser();
+}
+
+async getLoggedUser() {
+  try {
+    const response = await fetch('http://localhost:3000/loggedUser');
+    const user = await response.json();
+    if (user && Object.keys(user).length > 0) {
+      this.loggedUser = user;
+    }
+  } catch (error) {
+    console.error('Error fetching logged user:', error);
+  }
+} */
+
+/* 
+onLogoff() {
+  localStorage.removeItem('loggedUser');
+  this.router.navigateByUrl('/login')
+} */
+
+/* async onLogoff() {
+    try {
+      // Clear the logged user on the server
+      const options = {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+      };
+      await fetch('http://localhost:3000/loggedUser', options);
+      
+      // Navigate to the login page
+      this.router.navigateByUrl('/login');
+    } catch (error) {
+      console.error('Error during logoff:', error);
+    }
+  } */
+  isLoggedIn: boolean = true; 
+  loggedUser: any;
+
+  constructor(private router: Router) {
+    this.getLoggedUser();
+  }
+  
+  async getLoggedUser() {
+    try {
+      const response = await fetch('http://localhost:3000/loggedUser');
+      const user = await response.json();
+      if (user && Object.keys(user).length > 0) {
+        this.loggedUser = user;
+      }
+    } catch (error) {
+      console.error('Error fetching logged user:', error);
+    }
+  }
+  
+  async onLogoff() {
+    try {
+      const options = {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+      };
+  
+      await fetch('http://localhost:3000/loggedUser', options);
+      this.router.navigateByUrl('/home');
+    } catch (error) {
+      console.error('Error during logoff:', error);
+    }
+
+    this.isLoggedIn = false;
+  }
+  
 
 }

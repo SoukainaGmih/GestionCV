@@ -1,53 +1,93 @@
 {
-    "candidat": [
-        {
-            "id": 1,
-            "name": "EL MALKI Zineb",
-            "title": "full stack developer",
-            "technologies": [
-                "Java",
-                "Angular"
-            ],
-            "email": "zinebelmalki@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
-        },
-        {
-            "id": 2,
-            "name": "GMIH Soukain",
-            "title": "full stack developer",
-            "technologies": [
-                ".Net",
-                "Angular"
-            ],
-            "email": "gmihsoukaina@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
-        },
-        {
-            "id": 3,
-            "name": "HADDOUDI Abdelkarim",
-            "title": "full stack developer",
-            "technologies": [
-                "JAVA",
-                "Angular",
-                "python"
-            ],
-            "email": "abdelkarimhaddoudi@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Egypt"
-        },
-        {
-            "id": 4,
-            "name": "EL MALKI Zineb",
-            "title": "full stack developer",
-            "technologies": [
-                "Java",
-                "Angular"
-            ],
-            "email": "zinebelmalki@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
-        }
-    ]
+  "candidates": [
+    {
+      "id": 1,
+      "name": "EL MALKI Zineb",
+      "email": "zinebelmalki@gmail.com",
+      "title": "full stack developer",
+      "technologies": [
+        "Java",
+        "Angular"
+      ],
+      "imageUrl": "",
+      "pays": "Maroc",
+      "role": "Candidate"
+    },
+    {
+      "id": 2,
+      "name": "HADDOUDI Abdelkarim",
+      "email": "abdelkarimhaddoudi@gmail.com",
+      "title": "full stack developer",
+      "technologies": [
+        "JAVA",
+        "Angular",
+        "python"
+      ],
+      "imageUrl": "",
+      "pays": "Egypt",
+      "role": "Candidate"
+    },
+    {
+      "id": 3,
+      "name": "GMIH Soukain",
+      "email": "gmihsoukaina@gmail.com",
+      "title": "full stack developer",
+      "technologies": [
+        ".Net",
+        "Angular"
+      ],
+      "imageUrl": "",
+      "pays": "Maroc",
+      "role": "Candidate"
+    },
+    {
+      "id": "897a",
+      "name": "",
+      "email": "",
+      "password": "",
+      "role": "candidate"
+    }
+  ],
+  "companies": [
+    {
+      "name": "Tech Corp",
+      "email": "info@techcorp.com",
+      "role": "Company",
+      "industry": "Technology"
+    },
+    {
+      "name": "Marketing Solutions Ltd.",
+      "email": "contact@marketingsolutions.com",
+      "role": "Company",
+      "industry": "Marketing"
+    },
+    {
+      "name": "Finance First Inc.",
+      "email": "support@financefirst.com",
+      "role": "Company",
+      "industry": "Finance"
+    },
+    {
+      "id": "65a6",
+      "name": "",
+      "email": "soukaina2387@gmail.com",
+      "password": "",
+      "role": "company"
+    },
+    {
+      "id": "2888",
+      "name": "test",
+      "email": "test2@gmail.com",
+      "password": "",
+      "role": "company"
+    },
+    {
+      "id": "dea2",
+      "name": "test",
+      "email": "test3@gmail.com",
+      "password": "",
+      "role": "company"
+    }
+  ],
+  "loggedUser": {}
 }

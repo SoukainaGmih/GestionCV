@@ -24,6 +24,9 @@ import { HeaderVisiteurComponent } from './Visiteur/header-visiteur/header-visit
 import { SginInComponent } from './Auth/sgin-in/sgin-in.component';
 import { SginUpComponent } from './Auth/sgin-up/sgin-up.component';
 import { RouterLink } from '@angular/router';
+import { HeaderCondidatComponent } from './Candidat/header-condidat/header-condidat.component';
+import { MainVisiteurComponent } from './Visiteur/main-visiteur/main-visiteur.component';
+import { HeaderCompanyComponent } from './Societes/header-company/header-company.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { RouterLink } from '@angular/router';
     SginUpComponent,
     ChomeComponent,
     ShomeComponent,
-    AnnonceComponent
+    AnnonceComponent,
+    HeaderCondidatComponent,
+    MainVisiteurComponent,
+    HeaderCompanyComponent
   ],
   imports: [
     BrowserModule,

@@ -8,7 +8,7 @@
 
 <header class="header" id="header">
     <nav class="navbar container">
-       <a href="#" class="brand">LogoName</a>
+       <a [routerLink]="" class="brand">LogoName</a>
        <div class="burger" id="burger">
           <span class="burger-line"></span>
           <span class="burger-line"></span>
@@ -16,13 +16,20 @@
        </div>
        <div class="menu" id="menu">
           <ul class="menu-inner">
-             <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-             <li class="menu-item"><a href="#" class="menu-link">Condidat</a></li>
-             <li class="menu-item"><a href="#" class="menu-link">Company</a></li>
-             <li class="menu-item"><a href="#" class="menu-link">Support</a></li>
-             <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li>
+             <li class="menu-item"><a [routerLink]="" class="menu-link">Home</a></li>
+             <li class="menu-item"><a [routerLink]="" class="menu-link">Condidat</a></li>
+             <li class="menu-item"><a [routerLink]="" class="menu-link">Company</a></li>
+             <li class="menu-item"><a [routerLink]="" class="menu-link">Support</a></li>
+             <!-- <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li> -->
+             <form class="d-flex"  *ngIf="isLoggedIn">
+               <span class="text-white">{{loggedUser?.email}} </span> 
+               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
+             </form>
           </ul>
+
        </div>
-       <a [routerLink]="['/sginup']" class="menu-block">Join us</a>
+       <a [routerLink]="['/login']" class="menu-block">Join us</a>
     </nav>
  </header>
+
+
