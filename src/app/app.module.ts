@@ -12,8 +12,9 @@ import { IconFieldModule } from 'primeng/iconfield';
 import { InputIconModule } from 'primeng/inputicon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AnnonceComponent } from './Societes/annonce/annonce.component';
+import { ProfilComponent } from './Candidat/profil/profil.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AnnonceComponent } from './Societes/annonce/annonce.component';
     AppComponent,
     ChomeComponent,
     ShomeComponent,
-    AnnonceComponent
+    AnnonceComponent,
+    ProfilComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { AnnonceComponent } from './Societes/annonce/annonce.component';
     InputIconModule,
     IconFieldModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

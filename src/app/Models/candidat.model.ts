@@ -5,5 +5,6 @@ export interface Candidat {
     technologies: string[],
     email: string,
     imageUrl: string,
-    pays: string
+    pays: string,
+    skills: string[]
 }

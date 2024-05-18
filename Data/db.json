@@ -1,53 +1,112 @@
 {
-    "candidat": [
+  "candidat": [
+    {
+      "id": "1",
+      "name": "EL MALKI Zineb",
+      "title": "full stack developer",
+      "technologies": [
+        "Java",
+        "Angular"
+      ],
+      "email": "zinebelmalki@gmail.com",
+      "imageUrl": "/assets/societes/00000449.png",
+      "pays": "Maroc",
+      "skills": [
         {
-            "id": 1,
-            "name": "EL MALKI Zineb",
-            "title": "full stack developer",
-            "technologies": [
-                "Java",
-                "Angular"
-            ],
-            "email": "zinebelmalki@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
-        },
-        {
-            "id": 2,
-            "name": "GMIH Soukain",
-            "title": "full stack developer",
-            "technologies": [
-                ".Net",
-                "Angular"
-            ],
-            "email": "gmihsoukaina@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
-        },
-        {
-            "id": 3,
-            "name": "HADDOUDI Abdelkarim",
-            "title": "full stack developer",
-            "technologies": [
-                "JAVA",
-                "Angular",
-                "python"
-            ],
-            "email": "abdelkarimhaddoudi@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Egypt"
-        },
-        {
-            "id": 4,
-            "name": "EL MALKI Zineb",
-            "title": "full stack developer",
-            "technologies": [
-                "Java",
-                "Angular"
-            ],
-            "email": "zinebelmalki@gmail.com",
-            "imageUrl": "/assets/societes/00000449.png",
-            "pays": "Maroc"
+          "id": "1",
+          "title": "Java",
+          "level": "Beginner"
         }
-    ]
+      ]
+    },
+    {
+      "id": "2",
+      "name": "GMIH Soukain",
+      "title": "full stack developer",
+      "technologies": [
+        ".Net",
+        "Angular"
+      ],
+      "email": "gmihsoukaina@gmail.com",
+      "imageUrl": "/assets/societes/00000449.png",
+      "pays": "Maroc",
+      "skills": [
+        {
+          "id": "1",
+          "title": ".net",
+          "level": "Beginner"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "HADDOUDI Abdelkarim",
+      "title": "full stack developer",
+      "technologies": [
+        "JAVA",
+        "Angular",
+        "python"
+      ],
+      "email": "abdelkarimhaddoudi@gmail.com",
+      "imageUrl": "/assets/societes/00000449.png",
+      "pays": "Egypt",
+      "skills": [
+        {
+          "id": "1",
+          "title": "Java",
+          "level": "Beginner"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "EL MALKI Zineb",
+      "title": "full stack developer",
+      "technologies": [
+        "Java",
+        "Angular"
+      ],
+      "email": "zinebelmalki@gmail.com",
+      "imageUrl": "/assets/societes/00000449.png",
+      "pays": "Maroc",
+      "skills": [
+        {
+          "id": "1",
+          "title": "Java",
+          "level": "advanced"
+        }
+      ]
+    }
+  ],
+  "annonce": [
+    {
+      "id": "1",
+      "title": "annonce title",
+      "description": "annonce description",
+      "technology": "Java , .net",
+      "startdate": "07/02",
+      "createdat": "01/02",
+      "societename": "societe name"
+    },
+    {
+      "id": "2cfa",
+      "title": "java developer",
+      "description": "java developer description",
+      "technology": "java",
+      "contrat": null,
+      "startdate": "2024-06-01",
+      "createdat": "2024-05-15",
+      "societename": "jobintech"
+    },
+    {
+      "id": "1958",
+      "title": "data analyst",
+      "description": "data analyst description",
+      "technology": "python, sql ",
+      "contrat": null,
+      "startdate": "2024-06-01",
+      "createdat": "2024-05-18",
+      "societename": "capgemini"
+    }
+  ]
 }
