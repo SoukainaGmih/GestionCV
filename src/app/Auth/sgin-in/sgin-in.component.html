@@ -13,7 +13,7 @@
                 <span>or use your email for registeration</span>
                 <input type="text" name="name" [(ngModel)]="signUpObj.name" placeholder="Name" required #name="ngModel">
                 <div *ngIf="name.invalid && (name.dirty || name.touched)">
-                    <div *ngIf="name.errors && name.errors['required']">Name is required.</div>
+                    <div *ngIf="name.errors?.['required']">Name is required.</div>
                 </div>
 
                 <input type="email" name="email" [(ngModel)]="signUpObj.email" placeholder="Email" required>
@@ -62,5 +62,18 @@
             </div>
         </div>
     </div>
+</div>
+
+<!-- Error Modal -->
+<!-- <div class="modal" *ngIf="showErrorModal">
+    <div class="modal-content">
+      <span class="close" (click)="closeErrorModal()">&times;</span>
+      <p>{{ errorMessage }}</p>
+    </div>
+  </div> -->
+
+<!-- PrimeNG Messages Component -->
+<div class="popup-messages">
+    <p-messages [(value)]="messages" [enableService]="false"></p-messages>
 </div>
 

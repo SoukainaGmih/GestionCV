@@ -213,3 +213,36 @@
 .container.active .toggle-right{
     transform: translateX(200%);
 }
+
+.popup-messages {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 10px;
+}
+.popup-messages p-messages{
+    background: #000;
+    position: relative;
+} 
+.popup-messages p-messages button{
+    position: absolute;
+    right: 5px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* .popup-messages .p-message-wrapper {
+    position: relative;
+}
+
+.popup-messages button {
+    position: absolute;
+    right: 5px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+} */

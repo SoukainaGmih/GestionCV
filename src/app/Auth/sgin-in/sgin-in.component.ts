@@ -1,17 +1,26 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
 import { NgForm } from '@angular/forms';
+import { Message } from 'primeng/api';
 
 @Component({
   selector: 'app-sgin-in',
   templateUrl: './sgin-in.component.html',
   styleUrl: '/src/assets/Auth.css'
 })
-export class SginInComponent {
+export class SginInComponent implements OnInit{
+
   isSignDivVisiable: boolean  = true
+  showErrorModal: boolean = false;
+  errorMessage: string = '';
   signUpObj: SignUpModel  = new SignUpModel();
   loginObj: LoginModel  = new LoginModel();
+
+  messages: Message[] = [];
+
+  ngOnInit(): void {
+  }
 
   name!: string;
   email!: string;
@@ -20,6 +29,14 @@ export class SginInComponent {
   constructor(private router: Router,public logoffService: LogoffService){}
 
   async onRegister(form: NgForm)  {
+    if (form.invalid) {
+      for (const control of Object.values(form.controls)) {
+        control.markAsTouched();
+      }
+      this.messages = [{ severity: 'error', detail: 'Please fill in all required fields.' }];
+      return;
+    }
+    this.messages = [{ severity: 'success', detail: 'Registration successful.' }];
     /* if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
@@ -74,6 +91,11 @@ export class SginInComponent {
   }
   
   async onLogin(form: NgForm) {
+    if (this.loginObj.email === '' || this.loginObj.password === '') {
+      this.messages = [{ severity: 'error', detail: 'Please enter both email and password.' }];
+      return;
+    }
+    this.messages = [{ severity: 'success', detail: 'Login successful.' }];
     /* if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
@@ -130,6 +152,10 @@ export class SginInComponent {
       alert('An error occurred during login.');
     }
     this.logoffService.login();
+  }
+
+  closeErrorModal() {
+    this.messages = [];
   }
 }
 
