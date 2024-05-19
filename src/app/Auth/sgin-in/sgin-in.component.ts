@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { LogoffService } from '../../Services/LogOff/logoff.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-sgin-in',
@@ -7,59 +9,21 @@ import { Router } from '@angular/router';
   styleUrl: '/src/assets/Auth.css'
 })
 export class SginInComponent {
-
-
-  isSignDivVisiable: boolean  = true;
-
+  isSignDivVisiable: boolean  = true
   signUpObj: SignUpModel  = new SignUpModel();
   loginObj: LoginModel  = new LoginModel();
 
-  constructor(private router: Router){}
+  name!: string;
+  email!: string;
+  password!: string;
 
+  constructor(private router: Router,public logoffService: LogoffService){}
 
-/*   onRegister() {
-    debugger;
-    const localUser = localStorage.getItem('user');
-    if(localUser != null) {
-      const users =  JSON.parse(localUser);
-      users.push(this.signUpObj);
-      localStorage.setItem('user', JSON.stringify(users))
-    } else {
-      const users = [];
-      users.push(this.signUpObj);
-      localStorage.setItem('user', JSON.stringify(users))
-    }
-    alert('Registration Success')
-  } */
-
-/*   async onRegister() {
-    try {
-      const response = await fetch('http://localhost:3000/users');
-      const users = await response.json();
-      
-      const isUserExist = users.find((user: SignUpModel) => user.email === this.signUpObj.email);
-      if (isUserExist) {
-        alert('User with this email already exists.');
-        return;
-      }
-  
-      const options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(this.signUpObj)
-      };
-      
-      await fetch('http://localhost:3000/users', options);
-      alert('Registration Success');
-    } catch (error) {
-      console.error('Error during registration:', error);
-      alert('An error occurred during registration.');
-    }
-  }  */  
-
-  async onRegister() {
+  async onRegister(form: NgForm)  {
+    /* if (form.invalid) {
+      alert('Please fill in all required fields.');
+      return;
+    } */
     if (!this.signUpObj.role) {
       alert('Please select either Candidate or Company.');
       return;
@@ -109,7 +73,11 @@ export class SginInComponent {
     }
   }
   
-  async onLogin() {
+  async onLogin(form: NgForm) {
+    /* if (form.invalid) {
+      alert('Please fill in all required fields.');
+      return;
+    } */
     try {
       const candidateUrl = 'http://localhost:3000/candidates';
       const companyUrl = 'http://localhost:3000/companies';
@@ -161,58 +129,8 @@ export class SginInComponent {
       console.error('Error during login:', error);
       alert('An error occurred during login.');
     }
+    this.logoffService.login();
   }
-  
-  
-  
-/*   onLogin() {
-    debugger;
-    const localUsers =  localStorage.getItem('user');
-    if(localUsers != null) {
-      const users =  JSON.parse(localUsers);
-
-      const isUserPresent =  users.find( (user:SignUpModel)=> user.email == this.loginObj.email && user.password == this.loginObj.password);
-      if(isUserPresent != undefined) {
-        alert("User Found...");
-        localStorage.setItem('loggedUser', JSON.stringify(isUserPresent));
-        this.router.navigateByUrl('/home');
-      } else {
-        alert("No User Found")
-      }
-    }
-  } */
-
-/*   async onLogin() {
-    try {
-      const response = await fetch('http://localhost:3000/users');
-      const users = await response.json();
-      
-      const isUserPresent = users.find((user: SignUpModel) => 
-        user.email === this.loginObj.email && user.password === this.loginObj.password
-      );
-  
-      if (isUserPresent) {
-        alert("User Found...");
-        
-        const options = {
-          method: 'PUT',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(isUserPresent)
-        };
-        
-        await fetch('http://localhost:3000/loggedUser', options);
-        this.router.navigateByUrl('/home');
-      } else {
-        alert("No User Found");
-      }
-    } catch (error) {
-      console.error('Error during login:', error);
-      alert('An error occurred during login.');
-    }
-  } */ 
-  
 }
 
 export class SignUpModel  {

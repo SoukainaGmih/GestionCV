@@ -87,6 +87,13 @@
       "email": "test5@gmail.com",
       "password": "",
       "role": "candidate"
+    },
+    {
+      "name": "",
+      "email": "test8@gmail.com",
+      "password": "0000",
+      "role": "candidate",
+      "id": "b0Rkne2"
     }
   ],
   "companies": [
@@ -128,6 +135,13 @@
       "email": "test3@gmail.com",
       "password": "",
       "role": "company"
+    },
+    {
+      "name": "test",
+      "email": "test7@gmail.com",
+      "password": "0000",
+      "role": "company",
+      "id": "vRwyDGo"
     }
   ],
   "annonce": [
