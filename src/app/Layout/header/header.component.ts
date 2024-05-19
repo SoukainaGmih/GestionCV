@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
+import { LogoffService } from '../../Services/LogOff/logoff.service';
 
 @Component({
   selector: 'app-header',
@@ -8,6 +9,9 @@ import { MenuItem } from 'primeng/api';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
+  //isLoggedIn: boolean = true; 
+  isLoggedIn: boolean = false;
+  loggedUser: any;
   items: MenuItem[]  | undefined;
 
   ngOnInit() {
@@ -139,63 +143,13 @@ export class HeaderComponent implements OnInit {
             icon:'pi pi-fw pi-power-off'
         }
     ];
+
+    this.logoffService.isLoggedIn$.subscribe((loggedIn: boolean) => {
+      this.isLoggedIn = loggedIn;
+    });
 }
 
-
-/* loggedUser: any;
-constructor(private router: Router) {
-  const localUser = localStorage.getItem('loggedUser');
-  if(localUser != null) {
-    this.loggedUser = JSON.parse(localUser);
-  }
-} */
-
-/* loggedUser: any;
-
-constructor(private router: Router) {
-  this.getLoggedUser();
-}
-
-async getLoggedUser() {
-  try {
-    const response = await fetch('http://localhost:3000/loggedUser');
-    const user = await response.json();
-    if (user && Object.keys(user).length > 0) {
-      this.loggedUser = user;
-    }
-  } catch (error) {
-    console.error('Error fetching logged user:', error);
-  }
-} */
-
-/* 
-onLogoff() {
-  localStorage.removeItem('loggedUser');
-  this.router.navigateByUrl('/login')
-} */
-
-/* async onLogoff() {
-    try {
-      // Clear the logged user on the server
-      const options = {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({})
-      };
-      await fetch('http://localhost:3000/loggedUser', options);
-      
-      // Navigate to the login page
-      this.router.navigateByUrl('/login');
-    } catch (error) {
-      console.error('Error during logoff:', error);
-    }
-  } */
-  isLoggedIn: boolean = true; 
-  loggedUser: any;
-
-  constructor(private router: Router) {
+  constructor(private router: Router , public logoffService: LogoffService) {
     this.getLoggedUser();
   }
   
@@ -226,8 +180,10 @@ onLogoff() {
     } catch (error) {
       console.error('Error during logoff:', error);
     }
-
-    this.isLoggedIn = false;
+    this.logoffService.logoff();
+    //this.isLoggedIn = false;
+    /* this.logoffService.logoff();
+    console.log(this.logoffService); */
   }
   
 

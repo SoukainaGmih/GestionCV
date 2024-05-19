@@ -28,6 +28,8 @@ import { RouterLink } from '@angular/router';
 import { HeaderCondidatComponent } from './Candidat/header-condidat/header-condidat.component';
 import { MainVisiteurComponent } from './Visiteur/main-visiteur/main-visiteur.component';
 import { HeaderCompanyComponent } from './Societes/header-company/header-company.component';
+import { MessagesModule } from 'primeng/messages';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -47,6 +49,7 @@ import { HeaderCompanyComponent } from './Societes/header-company/header-company
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ButtonModule,
     MenubarModule,
@@ -57,7 +60,8 @@ import { HeaderCompanyComponent } from './Societes/header-company/header-company
     IconFieldModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MessagesModule
   ],
   providers: [],
   bootstrap: [AppComponent],
