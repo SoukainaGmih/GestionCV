@@ -214,6 +214,7 @@
     transform: translateX(200%);
 }
 
+/* 
 .popup-messages {
     position: fixed;
     top: 10%;
@@ -234,7 +235,7 @@
     align-content: center;
     display: flex;
     flex-wrap: wrap;
-}
+} */
 /* .popup-messages .p-message-wrapper {
     position: relative;
 }
@@ -246,3 +247,33 @@
     display: flex;
     flex-wrap: wrap;
 } */
+.error-border {
+    border: 2px solid red !important
+}
+
+.error-border {
+    border: 2px solid #FF0000; /* Red border for error */
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: calc(100% - 22px); /* Match the width of the input */
+}
+
+.error-message-icon {
+    margin-right: 10px;
+border: 1px solid red;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+align-items: center;
+display: flex;
+justify-content: center;
+}

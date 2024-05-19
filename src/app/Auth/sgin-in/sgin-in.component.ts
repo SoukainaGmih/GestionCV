@@ -2,7 +2,6 @@ import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
 import { NgForm } from '@angular/forms';
-import { Message } from 'primeng/api';
 
 @Component({
   selector: 'app-sgin-in',
@@ -10,14 +9,11 @@ import { Message } from 'primeng/api';
   styleUrl: '/src/assets/Auth.css'
 })
 export class SginInComponent implements OnInit{
-
   isSignDivVisiable: boolean  = true
   showErrorModal: boolean = false;
   errorMessage: string = '';
   signUpObj: SignUpModel  = new SignUpModel();
   loginObj: LoginModel  = new LoginModel();
-
-  messages: Message[] = [];
 
   ngOnInit(): void {
   }
@@ -30,24 +26,16 @@ export class SginInComponent implements OnInit{
 
   async onRegister(form: NgForm)  {
     if (form.invalid) {
-      for (const control of Object.values(form.controls)) {
-        control.markAsTouched();
-      }
-      this.messages = [{ severity: 'error', detail: 'Please fill in all required fields.' }];
-      return;
-    }
-    this.messages = [{ severity: 'success', detail: 'Registration successful.' }];
-    /* if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
-    } */
+    }
     if (!this.signUpObj.role) {
       alert('Please select either Candidate or Company.');
       return;
     }
   
     try {
-      const role = this.signUpObj.role;  // role should be either 'candidate' or 'company'
+      const role = this.signUpObj.role; 
       const candidateUrl = 'http://localhost:3000/candidates';
       const companyUrl = 'http://localhost:3000/companies';
   
@@ -84,6 +72,9 @@ export class SginInComponent implements OnInit{
   
       await fetch(url, options);
       alert('Registration Success');
+      form.resetForm();
+      this.signUpObj = new SignUpModel();
+      this.isSignDivVisiable = false;
     } catch (error) {
       console.error('Error during registration:', error);
       alert('An error occurred during registration.');
@@ -91,15 +82,10 @@ export class SginInComponent implements OnInit{
   }
   
   async onLogin(form: NgForm) {
-    if (this.loginObj.email === '' || this.loginObj.password === '') {
-      this.messages = [{ severity: 'error', detail: 'Please enter both email and password.' }];
-      return;
-    }
-    this.messages = [{ severity: 'success', detail: 'Login successful.' }];
-    /* if (form.invalid) {
+    if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
-    } */
+    } 
     try {
       const candidateUrl = 'http://localhost:3000/candidates';
       const companyUrl = 'http://localhost:3000/companies';
@@ -152,10 +138,6 @@ export class SginInComponent implements OnInit{
       alert('An error occurred during login.');
     }
     this.logoffService.login();
-  }
-
-  closeErrorModal() {
-    this.messages = [];
   }
 }
 
