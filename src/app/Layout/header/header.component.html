@@ -1,12 +1,6 @@
-<!-- <p-menubar [model]="items" class="text-2xl">
-    <ng-template pTemplate="start">
-        <img src="https://www.primefaces.org/primeng-v14-lts/assets/showcase/images/primeng-logo-dark.svg" height="40" class="mr-2">
-    </ng-template>
-    <button pButton pRipple type="button" label="Join" class="p-button-raised p-button-text" [routerLink]="['/login']"></button>
-    <button pButton pRipple type="button" label="Secondary" class="p-button-raised p-button-secondary p-button-text" [routerLink]="['/sginup']"></button>
-</p-menubar> -->
 
 <header class="header" id="header">
+
    <nav class="navbar container">
       <a [routerLink]="['/home']" class="brand">LogoName</a>
       <div class="burger" id="burger">
@@ -60,3 +54,4 @@
       <a *ngIf="currentMenu === 'home'" [routerLink]="['/login']" class="menu-block">Join us</a>
    </nav>
 </header>
+

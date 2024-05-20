@@ -1,12 +1,4 @@
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Rubik", sans-serif;
-}
- 
-
 .parent{
     background-color: var(--color-black-500);
     display: flex;
@@ -212,4 +204,68 @@
 
 .container.active .toggle-right{
     transform: translateX(200%);
+}
+
+/* 
+.popup-messages {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    z-index: 1000;
+    margin: 0 auto;
+    padding: 10px;
+}
+.popup-messages p-messages{
+    background: #000;
+    position: relative;
+} 
+.popup-messages p-messages button{
+    position: absolute;
+    right: 5px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+} */
+/* .popup-messages .p-message-wrapper {
+    position: relative;
+}
+
+.popup-messages button {
+    position: absolute;
+    right: 5px;
+    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+} */
+.error-border {
+    border: 2px solid red !important
+}
+
+.error-border {
+    border: 2px solid #FF0000; /* Red border for error */
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    background-color: #ffdddd;
+    color: #d8000c;
+    border: 1px solid #d8000c;
+    border-radius: 4px;
+    padding: 5px 10px;
+    font-size: 14px;
+    width: calc(100% - 22px); /* Match the width of the input */
+}
+
+.error-message-icon {
+    margin-right: 10px;
+border: 1px solid red;
+border-radius: 50%;
+width: 20px;
+height: 20px;
+align-items: center;
+display: flex;
+justify-content: center;
 }
