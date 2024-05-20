@@ -7,6 +7,9 @@ import { ChomeComponent } from './Candidat/chome/chome.component';
 import { ShomeComponent } from './Societes/shome/shome.component';
 import { HeaderCompanyComponent } from './Societes/header-company/header-company.component';
 import { HeaderCondidatComponent } from './Candidat/header-condidat/header-condidat.component';
+import { MainVisiteurComponent } from './Visiteur/main-visiteur/main-visiteur.component';
+import { AnnonceComponent } from './Societes/annonce/annonce.component';
+import { ProfilComponent } from './Candidat/profil/profil.component';
 
 const routes: Routes = [
   { path: '',
@@ -24,7 +27,10 @@ const routes: Routes = [
   { path: 'condidat-home', component: ChomeComponent },
   { path: 'socite-home', component: ShomeComponent },
   { path: 'Company', component: HeaderCompanyComponent },
-  { path: 'Candidat', component: HeaderCondidatComponent }
+  { path: 'Candidat', component: HeaderCondidatComponent },
+  { path: 'main-visitor', component: MainVisiteurComponent },
+  { path: 'annonce', component: AnnonceComponent },
+  { path: 'profil', component: ProfilComponent }
 
 ];
 

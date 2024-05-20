@@ -1,1 +1,50 @@
-<p>main-visiteur works!</p>
+<div class="container">
+    <div class="formgrid grid">
+        <div class="field col">
+            <input id="" type="text" placeholder="technology" [(ngModel)]="keyword"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <div class="field col">
+            <input id="" type="text" placeholder="company" [(ngModel)]="keycompany"
+                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+        </div>
+        <p-button icon="pi pi-search" (click)="keyword ? searchPoste() :  searchCompany()" [rounded]="true"
+            [text]="true" />
+    </div>
+
+
+    <div class="grid" *ngIf="annonces as annoncesList">
+
+        <p-card *ngFor="let annonce of annoncesList" header="{{annonce.societename}}" subheader="{{annonce.title}}"
+            [style]="{ width: '400px', height : '400px' }">
+            <ng-template pTemplate="header">
+
+                <!-- <img alt="Card" src="" /> -->
+            </ng-template>
+            <div>
+
+                <!-- <p *ngFor="let techno of" > JAVA, Angular</p> -->
+                <p>{{annonce.description}}</p>
+
+            </div>
+            <div>
+                <p><strong>Technology : </strong>{{annonce.technology}}</p>
+            </div>
+            <div>
+                <p><strong>Start at : </strong>{{annonce.startdate}}</p>
+            </div>
+            <div>
+                <p><strong>Published at : </strong>{{annonce.createdat}}</p>
+            </div>
+            <ng-template pTemplate="footer">
+                <div class="flex gap-3 mt-1">
+                    <p-button label="Apply" routerLink="/login" severity="warning" class="w-full" styleClass="w-full" />
+                </div>
+            </ng-template>
+        </p-card>
+
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>
