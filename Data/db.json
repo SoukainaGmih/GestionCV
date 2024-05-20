@@ -94,6 +94,13 @@
       "email": "zinebelmalki0602@gmail.com",
       "password": "azertyuiop",
       "role": "candidate"
+    },
+    {
+      "id": "a4af",
+      "name": "Zineb EL MALKI",
+      "email": "meryemouali16@gmail.com",
+      "password": "azertyuiop",
+      "role": "candidate"
     }
   ],
   "companies": [

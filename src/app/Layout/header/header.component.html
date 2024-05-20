@@ -7,29 +7,56 @@
 </p-menubar> -->
 
 <header class="header" id="header">
-    <nav class="navbar container">
-       <a [routerLink]="" class="brand">LogoName</a>
-       <div class="burger" id="burger">
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-          <span class="burger-line"></span>
-       </div>
-       <div class="menu" id="menu">
-          <ul class="menu-inner">
-             <li class="menu-item"><a [routerLink]="" class="menu-link">Home</a></li>
-             <li class="menu-item"><a [routerLink]="" class="menu-link">Condidat</a></li>
-             <li class="menu-item"><a [routerLink]="" class="menu-link">Company</a></li>
-             <li class="menu-item"><a [routerLink]="" class="menu-link">Support</a></li>
-             <!-- <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li> -->
-             <form class="d-flex"  *ngIf="isLoggedIn">
-               <span class="text-white">{{loggedUser?.email}} </span> 
+   <nav class="navbar container">
+      <a [routerLink]="['/home']" class="brand">LogoName</a>
+      <div class="burger" id="burger">
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+         <span class="burger-line"></span>
+      </div>
+      <div class="menu" id="menu">
+
+
+         <ul *ngIf="currentMenu === 'home'" class="menu-inner">
+            <li class="menu-item"><a [routerLink]="['/home']" class="menu-link">Home</a></li>
+            <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Condidat</a></li>
+            <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Company</a></li>
+            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+            <form class="d-flex" *ngIf="isLoggedIn">
+               <span class="text-white">{{loggedUser?.email}} </span>
                <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
-             </form>
-          </ul>
-
-       </div>
-       <a [routerLink]="['/login']" class="menu-block">Join us</a>
-    </nav>
- </header>
+            </form>
+         </ul>
 
 
+         <ul *ngIf="currentMenu === 'candidate'" class="menu-inner">
+            <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Home</a></li>
+            <li class="menu-item"><a [routerLink]="['/postulation']" class="menu-link">Postulation</a></li>
+            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+            <form class="d-flex" *ngIf="isLoggedIn">
+               <span class="text-white">{{loggedUser?.email}} </span>
+               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
+            </form>
+         </ul>
+
+
+         <ul *ngIf="currentMenu === 'company'" class="menu-inner">
+            <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Home</a></li>
+            <li class="menu-item"><a [routerLink]="['/annonce']" class="menu-link">Post an announcement</a>
+            </li>
+            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+            <form class="d-flex" *ngIf="isLoggedIn">
+               <span class="text-white">{{loggedUser?.email}} </span>
+               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
+            </form>
+         </ul>
+
+
+         <!-- <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li> -->
+
+
+
+      </div>
+      <a *ngIf="currentMenu === 'home'" [routerLink]="['/login']" class="menu-block">Join us</a>
+   </nav>
+</header>
