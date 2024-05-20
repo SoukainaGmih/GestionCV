@@ -1,64 +1,113 @@
-<section class="container">
-    <header>Registration Form</header>
-    <form action="#" class="form">
-      <div class="input-box">
-        <label>Full Name</label>
-        <input type="text" placeholder="Enter full name" required />
+<div class="sectin_registration">
+   <div class="container">
+      <header>
+         <i class="fa-solid fa-arrow-left"></i>
+         <div>Signup Form</div>
+      </header>
+      <div class="progress-bar">
+         <div class="step" *ngFor="let step of steps; let i = index">
+            <p [class.active]="currentStep > i">{{step.label}}</p>
+            <div class="bullet" [class.active]="currentStep > i">
+               <span>{{i + 1}}</span>
+            </div>
+            <div class="check fas fa-check" [class.active]="currentStep > i"></div>
+         </div>
       </div>
+      <div class="form-outer">
+         <form (submit)="onSubmit($event)">
+            <div class="page slide-page" [style.marginLeft]="marginLeft">
+                <div class="title">Basic Info:</div>
+                <!-- <div class="field">
+                   <div class="label">First Name</div>
+                   <input type="text">
+                </div>
+                <div class="field">
+                   <div class="label">Last Name</div>
+                   <input type="text">
+                </div> -->
 
-      <div class="input-box">
-        <label>Email Address</label>
-        <input type="text" placeholder="Enter email address" required />
-      </div>
+               <div class="grid">
+                  <div class="col-6">
+                     <div class="field">
+                        <div class="label">First Name</div>
+                        <input type="text">
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="field">
+                        <div class="label">Last Name</div>
+                        <input type="text">
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="field">
+                        <div class="label">First Name</div>
+                        <input type="text">
+                     </div>
+                  </div>
+                  <div class="col-6">
+                     <div class="field">
+                        <div class="label">Last Name</div>
+                        <input type="text">
+                     </div>
+                  </div>
+               </div>
 
-      <div class="column">
-        <div class="input-box">
-          <label>Phone Number</label>
-          <input type="number" placeholder="Enter phone number" required />
-        </div>
-        <div class="input-box">
-          <label>Birth Date</label>
-          <input type="date" placeholder="Enter birth date" required />
-        </div>
+                <div class="field">
+                   <button type="button" class="firstNext next" (click)="nextStep($event)">Next</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="title">Contact Info:</div>
+                <div class="field">
+                   <div class="label">Email Address</div>
+                   <input type="text">
+                </div>
+                <div class="field">
+                   <div class="label">Phone Number</div>
+                   <input type="Number">
+                </div>
+                <div class="field btns">
+                   <button type="button" class="prev-1 prev" (click)="prevStep($event)">Previous</button>
+                   <button type="button" class="next-1 next" (click)="nextStep($event)">Next</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="title">Date of Birth:</div>
+                <div class="field">
+                   <div class="label">Date</div>
+                   <input type="text">
+                </div>
+                <div class="field">
+                   <div class="label">Gender</div>
+                   <select>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                   </select>
+                </div>
+                <div class="field btns">
+                   <button type="button" class="prev-2 prev" (click)="prevStep($event)">Previous</button>
+                   <button type="button" class="next-2 next" (click)="nextStep($event)">Next</button>
+                </div>
+            </div>
+            <div class="page">
+                <div class="title">Login Details:</div>
+                <div class="field">
+                   <div class="label">Username</div>
+                   <input type="text">
+                </div>
+                <div class="field">
+                   <div class="label">Password</div>
+                   <input type="password">
+                </div>
+                <div class="field btns">
+                   <button type="button" class="prev-3 prev" (click)="prevStep($event)">Previous</button>
+                   <button type="submit" class="submit">Submit</button>
+                </div>
+            </div>
+         </form>
       </div>
-      <div class="gender-box">
-        <h3>Gender</h3>
-        <div class="gender-option">
-          <div class="gender">
-            <input type="radio" id="check-male" name="gender" checked />
-            <label for="check-male">male</label>
-          </div>
-          <div class="gender">
-            <input type="radio" id="check-female" name="gender" />
-            <label for="check-female">Female</label>
-          </div>
-          <div class="gender">
-            <input type="radio" id="check-other" name="gender" />
-            <label for="check-other">prefer not to say</label>
-          </div>
-        </div>
-      </div>
-      <div class="input-box address">
-        <label>Address</label>
-        <input type="text" placeholder="Enter street address" required />
-        <input type="text" placeholder="Enter street address line 2" required />
-        <div class="column">
-          <div class="select-box">
-            <select>
-              <option hidden>Country</option>
-              <option>America</option>
-              <option>Japan</option>
-              <option>India</option>
-              <option>Nepal</option>
-            </select>
-          </div>
-          <input type="text" placeholder="Enter your city" required />
-        </div>
-        <div class="column">
-          <input type="text" placeholder="Enter your region" required />
-          <input type="number" placeholder="Enter postal code" required />
-        </div>
-      </div>
-      <button>Submit</button>
-    </form>
-  </section>
+   </div>
+</div>
+

@@ -108,6 +108,13 @@
       "password": "0909",
       "role": "candidate",
       "id": "r9dztmD"
+    },
+    {
+      "name": "test",
+      "email": "test24@gmail.com",
+      "password": "9090",
+      "role": "candidate",
+      "id": "-DRB3ww"
     }
   ],
   "companies": [
@@ -198,6 +205,13 @@
       "password": "9090",
       "role": "company",
       "id": "wwisO1P"
+    },
+    {
+      "name": "test",
+      "email": "test23@gmail.com",
+      "password": "0000",
+      "role": "company",
+      "id": "y-m-ULF"
     }
   ],
   "annonce": [
@@ -231,11 +245,5 @@
       "societename": "capgemini"
     }
   ],
-  "loggedUser": {
-    "name": "test",
-    "email": "test31@gmail.com",
-    "password": "0000",
-    "role": "company",
-    "id": "GnKJ29G"
-  }
+  "loggedUser": {}
 }

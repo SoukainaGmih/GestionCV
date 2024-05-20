@@ -6,7 +6,7 @@ import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-sgin-in',
   templateUrl: './sgin-in.component.html',
-  styleUrl: '/src/assets/Auth.css'
+  styleUrl: '/src/assets/styles/Auth.css'
 })
 export class SginInComponent implements OnInit{
   isSignDivVisiable: boolean  = true

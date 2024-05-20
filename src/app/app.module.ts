@@ -30,6 +30,9 @@ import { MainVisiteurComponent } from './Visiteur/main-visiteur/main-visiteur.co
 import { HeaderCompanyComponent } from './Societes/header-company/header-company.component';
 import { MessagesModule } from 'primeng/messages';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AvatarGroupModule } from 'primeng/avatargroup';
+import { AvatarModule } from 'primeng/avatar';
+
 
 @NgModule({
   declarations: [
@@ -61,7 +64,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MessagesModule
+    MessagesModule,
+    AvatarGroupModule,
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent],

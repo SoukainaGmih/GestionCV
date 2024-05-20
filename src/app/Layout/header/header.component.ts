@@ -9,7 +9,8 @@ import { LogoffService } from '../../Services/LogOff/logoff.service';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent implements OnInit {
-  //isLoggedIn: boolean = true; 
+  //isLoggedIn: boolean = true;
+  showProfileCard: boolean = false;
   isLoggedIn: boolean = false;
   loggedUser: any;
   items: MenuItem[]  | undefined;
@@ -186,5 +187,8 @@ export class HeaderComponent implements OnInit {
     console.log(this.logoffService); */
   }
   
+  toggleProfileCard() {
+    this.showProfileCard = !this.showProfileCard;
+}
 
 }
