@@ -1,0 +1,98 @@
+body {
+    background-color: #1E3A8A;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.formgrid {
+    margin-bottom: 20px;
+}
+
+.field input {
+    background-color: #3B82F6;
+    color: #ffffff;
+
+    border-color: #60A5FA;
+
+}
+
+.field input:focus {
+    border-color: #2563EB;
+}
+
+p-button {
+    margin-top: 10px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+p-card {
+    background-color: #1E40AF;
+    color: #ffffff;
+    border: 1px solid #3B82F6;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+p-card .header {
+    background-color: #2563EB;
+    color: #ffffff;
+    padding: 10px;
+}
+
+p-card .footer {
+    background-color: #2563EB;
+    padding: 10px;
+    text-align: center;
+}
+
+p-card p {
+    margin: 10px 0;
+}
+
+p-card p strong {
+    color: #1E3A8A;
+}
+
+p-card .flex {
+    display: flex;
+    gap: 10px;
+}
+
+p-button[label="Apply"] {
+    background-color: #1E3A8A;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+p-button[label="Apply"]:hover {
+    background-color: #a7deec;
+}
+
+@media (max-width: 1024px) {
+    p-card {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    p-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

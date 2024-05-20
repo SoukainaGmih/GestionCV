@@ -13,7 +13,7 @@ export class CandidatsService {
   constructor(private http: HttpClient) { }
 
   public getCandidats(): Observable<Array<Candidat>> {
-    return this.http.get<Array<Candidat>>("http://localhost:8089/candidat")
+    return this.http.get<Array<Candidat>>("http://localhost:3000/candidat")
   }
 
 
@@ -21,14 +21,14 @@ export class CandidatsService {
 
   public searchCandidats(keyword: string): Observable<Array<Candidat>> {
 
-    return this.http.get<Candidat[]>('http://localhost:8089/candidat').pipe(
+    return this.http.get<Candidat[]>('http://localhost:3000/candidat').pipe(
       map(candidats => candidats.filter(candidat => candidat.name.toLowerCase().includes(keyword.toLowerCase()))))
   }
 
 
   public searchPays(keyword: string): Observable<Array<Candidat>> {
 
-    return this.http.get<Candidat[]>('http://localhost:8089/candidat').pipe(
+    return this.http.get<Candidat[]>('http://localhost:3000/candidat').pipe(
       map(candidats => candidats.filter(candidat => candidat.pays.toLowerCase().includes(keyword.toLowerCase()))))
   }
 

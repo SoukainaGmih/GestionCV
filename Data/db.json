@@ -108,13 +108,6 @@
       "password": "0909",
       "role": "candidate",
       "id": "r9dztmD"
-    },
-    {
-      "name": "test",
-      "email": "test24@gmail.com",
-      "password": "9090",
-      "role": "candidate",
-      "id": "-DRB3ww"
     }
   ],
   "companies": [
@@ -122,19 +115,22 @@
       "name": "Tech Corp",
       "email": "info@techcorp.com",
       "role": "company",
-      "industry": "Technology"
+      "industry": "Technology",
+      "id": "27d3"
     },
     {
       "name": "Marketing Solutions Ltd.",
       "email": "contact@marketingsolutions.com",
       "role": "company",
-      "industry": "Marketing"
+      "industry": "Marketing",
+      "id": "f80f"
     },
     {
       "name": "Finance First Inc.",
       "email": "support@financefirst.com",
       "role": "company",
-      "industry": "Finance"
+      "industry": "Finance",
+      "id": "3421"
     },
     {
       "id": "65a6",
@@ -243,6 +239,16 @@
       "startdate": "2024-06-01",
       "createdat": "2024-05-18",
       "societename": "capgemini"
+    },
+    {
+      "id": "5f4d",
+      "title": "cyber security ",
+      "description": "In-depth reports covering a specific cybersecurity issue, often including threat actor tactics, techniques, and procedures; indicators of compromise; and mitigations.",
+      "technology": "python",
+      "contrat": null,
+      "startdate": "2024-06-01",
+      "createdat": "2024-05-19",
+      "societename": "DXC"
     }
   ],
   "loggedUser": {}
