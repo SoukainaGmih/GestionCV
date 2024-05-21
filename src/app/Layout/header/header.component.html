@@ -38,6 +38,8 @@
             <li class="menu-item"><a [routerLink]="['/annonce']" class="menu-link">Post an announcement</a>
             </li>
             <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+            <li class="menu-item"><a [routerLink]="['/home']" class="menu-link"
+                  [queryParams]="{logout : true}">logout</a></li>
             <form class="d-flex" *ngIf="isLoggedIn">
                <span class="text-white">{{loggedUser?.email}} </span>
                <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>

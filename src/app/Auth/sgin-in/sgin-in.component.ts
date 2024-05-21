@@ -1,19 +1,24 @@
-import { Component,OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
 import { NgForm } from '@angular/forms';
+import { AuthService } from '../../Services/Auth/auth.service';
 
 @Component({
   selector: 'app-sgin-in',
   templateUrl: './sgin-in.component.html',
   styleUrl: '/src/assets/styles/Auth.css'
 })
-export class SginInComponent implements OnInit{
-  isSignDivVisiable: boolean  = true
+export class SginInComponent implements OnInit {
+  isSignDivVisiable: boolean = true
   showErrorModal: boolean = false;
   errorMessage: string = '';
-  signUpObj: SignUpModel  = new SignUpModel();
-  loginObj: LoginModel  = new LoginModel();
+  signUpObj: SignUpModel = new SignUpModel();
+  loginObj: LoginModel = new LoginModel();
+  @ViewChild('username') username!: ElementRef;
+  @ViewChild('pass') pass!: ElementRef;
+  authservice: AuthService = Inject(AuthService);
+
 
   ngOnInit(): void {
   }
@@ -22,9 +27,19 @@ export class SginInComponent implements OnInit{
   email!: string;
   password!: string;
 
-  constructor(private router: Router,public logoffService: LogoffService){}
+  constructor(public router: Router, public logoffService: LogoffService, private auth: AuthService) { }
 
-  async onRegister(form: NgForm)  {
+  OnLoginClicked() {
+    const username = this.username.nativeElement.value;
+    const pass = this.pass.nativeElement.value;
+
+
+
+  }
+
+
+
+  async onRegister(form: NgForm) {
     if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
@@ -33,25 +48,25 @@ export class SginInComponent implements OnInit{
       alert('Please select either Candidate or Company.');
       return;
     }
-  
+
     try {
-      const role = this.signUpObj.role; 
+      const role = this.signUpObj.role;
       const candidateUrl = 'http://localhost:3000/candidates';
       const companyUrl = 'http://localhost:3000/companies';
-  
+
       const candidateResponse = await fetch(candidateUrl);
       const companyResponse = await fetch(companyUrl);
-  
+
       const candidates = await candidateResponse.json();
       const companies = await companyResponse.json();
-  
+
       const isUserExist = [...candidates, ...companies].some((user: any) => user.email === this.signUpObj.email);
-  
+
       if (isUserExist) {
         alert('User with this email already exists.');
         return;
       }
-  
+
       let url = '';
       if (role === 'candidate') {
         url = candidateUrl;
@@ -61,7 +76,7 @@ export class SginInComponent implements OnInit{
         alert('Invalid role');
         return;
       }
-  
+
       const options = {
         method: 'POST',
         headers: {
@@ -69,7 +84,7 @@ export class SginInComponent implements OnInit{
         },
         body: JSON.stringify(this.signUpObj)
       };
-  
+
       await fetch(url, options);
       alert('Registration Success');
       form.resetForm();
@@ -80,33 +95,34 @@ export class SginInComponent implements OnInit{
       alert('An error occurred during registration.');
     }
   }
-  
+
   async onLogin(form: NgForm) {
     if (form.invalid) {
       alert('Please fill in all required fields.');
       return;
-    } 
+    }
     try {
       const candidateUrl = 'http://localhost:3000/candidates';
       const companyUrl = 'http://localhost:3000/companies';
-  
+
       const candidateResponse = await fetch(candidateUrl);
       const companyResponse = await fetch(companyUrl);
-  
+
       const candidates = await candidateResponse.json();
       const companies = await companyResponse.json();
-  
-      const isCandidatePresent = candidates.find((user: any) => 
+
+      const isCandidatePresent = candidates.find((user: any) =>
         user.email === this.loginObj.email && user.password === this.loginObj.password
       );
-  
-      const isCompanyPresent = companies.find((user: any) => 
+
+      const isCompanyPresent = companies.find((user: any) =>
         user.email === this.loginObj.email && user.password === this.loginObj.password
       );
-  
+
       if (isCandidatePresent) {
-        alert("Candidate Found...");
-  
+        this.auth.changeIsLogedCandidat()
+
+
         const options = {
           method: 'PUT',
           headers: {
@@ -114,12 +130,12 @@ export class SginInComponent implements OnInit{
           },
           body: JSON.stringify(isCandidatePresent)
         };
-  
+
         await fetch('http://localhost:3000/loggedUser', options);
         this.router.navigateByUrl('/Candidat');
       } else if (isCompanyPresent) {
-        alert("Company Found...");
-  
+        this.auth.changeIsLogedCampany()
+
         const options = {
           method: 'PUT',
           headers: {
@@ -127,7 +143,7 @@ export class SginInComponent implements OnInit{
           },
           body: JSON.stringify(isCompanyPresent)
         };
-  
+
         await fetch('http://localhost:3000/loggedUser', options);
         this.router.navigateByUrl('/Company');  // Assuming company redirects to home
       } else {
@@ -141,7 +157,7 @@ export class SginInComponent implements OnInit{
   }
 }
 
-export class SignUpModel  {
+export class SignUpModel {
   name: string;
   email: string;
   password: string;
@@ -150,17 +166,17 @@ export class SignUpModel  {
   constructor() {
     this.name = '';
     this.email = '';
-    this.password= '';
+    this.password = '';
     this.role = ''
   }
 }
 
-export class LoginModel  { 
+export class LoginModel {
   email: string;
   password: string;
 
   constructor() {
-    this.email = ""; 
-    this.password= ""
+    this.email = "";
+    this.password = ""
   }
 }

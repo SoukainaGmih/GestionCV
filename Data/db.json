@@ -18,7 +18,8 @@
           "title": "Java",
           "level": "Beginner"
         }
-      ]
+      ],
+      "password": "123456"
     },
     {
       "id": "2",
@@ -38,7 +39,8 @@
           "title": ".net",
           "level": "Beginner"
         }
-      ]
+      ],
+      "password": "123456"
     },
     {
       "id": "3",
@@ -59,7 +61,8 @@
           "title": "Java",
           "level": "Beginner"
         }
-      ]
+      ],
+      "password": "123456"
     },
     {
       "id": "4",
@@ -79,13 +82,14 @@
           "title": "Java",
           "level": "advanced"
         }
-      ]
+      ],
+      "password": "123456"
     },
     {
       "id": "0416",
       "name": "test",
       "email": "test5@gmail.com",
-      "password": "",
+      "password": "123456",
       "role": "candidate"
     },
     {
@@ -109,28 +113,31 @@
       "email": "info@techcorp.com",
       "role": "company",
       "industry": "Technology",
-      "id": "27d3"
+      "id": "27d3",
+      "password": "azertyuiop"
     },
     {
       "name": "Marketing Solutions Ltd.",
       "email": "contact@marketingsolutions.com",
       "role": "company",
       "industry": "Marketing",
-      "id": "f80f"
+      "id": "f80f",
+      "password": "azertyuiop"
     },
     {
       "name": "Finance First Inc.",
       "email": "support@financefirst.com",
       "role": "company",
       "industry": "Finance",
-      "id": "3421"
+      "id": "3421",
+      "password": "azertyuiop"
     },
     {
       "id": "65a6",
       "name": "",
       "email": "soukaina2387@gmail.com",
-      "password": "",
-      "role": "company"
+      "role": "company",
+      "password": "azertyuiop"
     },
     {
       "id": "2888",
@@ -143,7 +150,7 @@
       "id": "dea2",
       "name": "test",
       "email": "test3@gmail.com",
-      "password": "",
+      "password": "azertyuiop",
       "role": "company"
     },
     {
@@ -244,5 +251,25 @@
       "societename": "DXC"
     }
   ],
-  "loggedUser": {}
+  "loggedUser": {
+    "id": "1",
+    "name": "EL MALKI Zineb",
+    "email": "zinebelmalki@gmail.com",
+    "title": "full stack developer",
+    "technologies": [
+      "Java",
+      "Angular"
+    ],
+    "imageUrl": "/assets/societes/00000449.png",
+    "pays": "Maroc",
+    "role": "candidate",
+    "skills": [
+      {
+        "id": "1",
+        "title": "Java",
+        "level": "Beginner"
+      }
+    ],
+    "password": "123456"
+  }
 }

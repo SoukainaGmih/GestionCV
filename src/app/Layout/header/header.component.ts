@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
+import { AuthService } from '../../Services/Auth/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -154,7 +155,7 @@ export class HeaderComponent implements OnInit {
 
 
 
-  constructor(private router: Router, public logoffService: LogoffService) {
+  constructor(private router: Router, public logoffService: LogoffService, private auth: AuthService) {
     this.getLoggedUser();
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -193,6 +194,7 @@ export class HeaderComponent implements OnInit {
 
       await fetch('http://localhost:3000/loggedUser', options);
       this.router.navigateByUrl('/home');
+      this.auth.logout()
     } catch (error) {
       console.error('Error during logoff:', error);
     }
