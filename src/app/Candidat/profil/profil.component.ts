@@ -5,39 +5,49 @@ import { CandidatsService } from '../../Services/candidats/candidats.service';
 @Component({
   selector: 'app-profil',
   templateUrl: './profil.component.html',
-  styleUrl: './profil.component.css'
+  styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
+  candidats: Array<Candidat> = [];
+  loggedUser: any;
+  candidateInfo: Candidat | undefined;
 
-  candidats?: Array<Candidat>;
-
-  constructor(private candidatservice: CandidatsService) {
-
-  }
-
-  getCandidats() {
-    this.candidatservice.getCandidats().subscribe({
-      next: data => this.candidats = data,
-      error: err => {
-        console.log(err)
-      }
-
-    })
-  }
-
-  getSkills() {
-    this.candidatservice.getCandidats().subscribe((candidat: Array<Candidat>) => {
-      candidat.forEach((candidatData: Candidat) => {
-        candidatData.skills.forEach((skill: any) => {
-
-        });
-      });
-    });
-  }
-
+  constructor(
+    private candidatservice: CandidatsService) {}
 
   ngOnInit(): void {
-    this.getCandidats();
+    this.loadUser();
   }
 
+  async loadUser(): Promise<void> {
+    try {
+      // Fetch logged user
+      const userResponse = await fetch('http://localhost:3000/loggedUser');
+      this.loggedUser = await userResponse.json();
+      console.log("Logged-in user:" , this.loggedUser);
+
+      // Fetch candidates
+      this.candidatservice.getCandidats().subscribe(
+        (data: Array<Candidat>) => {
+          this.candidats = data;
+          console.log("candidats:" , this.candidats);
+
+          // Find candidate info based on logged user ID
+          this.candidateInfo = this.candidats.find(
+            candidat => candidat.id === this.loggedUser.id
+          );
+          if (this.candidateInfo) {
+            console.log("candidate Info :" , this.candidateInfo);
+          } else {
+            console.log('No candidate information found for the logged-in user.');
+          }
+        },
+        (error) => {
+          console.error('Error fetching candidates:', error);
+        }
+      );
+    } catch (error) {
+      console.error('Error fetching logged user:', error);
+    }
+  }
 }

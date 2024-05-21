@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
+import { AnnoncesService } from '../../Services/Annonces/annonces.service';
+import { SearchService } from '../../Services/Search/search.service';
+import { Annonce } from '../../Models/annonce.model';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +18,7 @@ export class HeaderComponent implements OnInit {
   loggedUser: any;
   items: MenuItem[]  | undefined;
 
-  ngOnInit() {
+    ngOnInit() {
     this.items = [
         {
             label:'File',
@@ -144,29 +147,29 @@ export class HeaderComponent implements OnInit {
             icon:'pi pi-fw pi-power-off'
         }
     ];
-
     this.logoffService.isLoggedIn$.subscribe((loggedIn: boolean) => {
-      this.isLoggedIn = loggedIn;
+        this.isLoggedIn = loggedIn;
     });
-}
-
-  constructor(private router: Router , public logoffService: LogoffService) {
+    }
+    constructor(private router: Router , public logoffService: LogoffService ,private annoncesService: AnnoncesService
+        ,private searchService: SearchService
+    ) {
     this.getLoggedUser();
-  }
-  
-  async getLoggedUser() {
+    }
+    async getLoggedUser() {
     try {
       const response = await fetch('http://localhost:3000/loggedUser');
       const user = await response.json();
       if (user && Object.keys(user).length > 0) {
         this.loggedUser = user;
+        console.log(this.loggedUser);
+        console.log(user.id);
       }
     } catch (error) {
       console.error('Error fetching logged user:', error);
     }
-  }
-  
-  async onLogoff() {
+    }
+    async onLogoff() {
     try {
       const options = {
         method: 'PUT',
@@ -185,10 +188,10 @@ export class HeaderComponent implements OnInit {
     //this.isLoggedIn = false;
     /* this.logoffService.logoff();
     console.log(this.logoffService); */
-  }
-  
-  toggleProfileCard() {
+    }
+    toggleProfileCard() {
     this.showProfileCard = !this.showProfileCard;
-}
+    }
+
 
 }

@@ -1,1 +1,24 @@
-<p>main-visiteur works!</p>
+<div class="container">
+  <div class="formgrid grid">
+      <div class="field col">
+          <input type="text" placeholder="Search" [(ngModel)]="keyword"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+              <button class="btn-search" (click)="searchWithKeyword()"><i class="fas fa-search"></i></button>
+      </div>
+      
+  </div>
+</div>
+
+<div class="band" *ngIf="annonces">
+  <div class="item" *ngFor="let annonce of annonces">
+      <a href="" class="card">
+          <div class="thumb"></div>
+          <article>
+              <h1>{{annonce.societename}}</h1>
+              <h5>{{annonce.title}}</h5>
+              <p>{{annonce.description}}</p>
+              <span>Date : {{annonce.startdate}} - {{annonce.createdat}} </span>
+          </article>
+      </a>
+  </div>
+</div>
