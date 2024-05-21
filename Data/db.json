@@ -1,6 +1,32 @@
 {
   "candidates": [
     {
+      "id": "11",
+      "civility": "Mr.",
+      "firstName": "John",
+      "lastName": "Doe",
+      "country": "USA",
+      "email": "john.doe@example.com",
+      "phone": "+1 123 456 7890",
+      "password": "securepassword",
+      "confirmPassword": "securepassword",
+      "educationLevel": "Bachelor's Degree",
+      "experience": "5 years",
+      "trainingType": "Full-time",
+      "jobTitle": "Software Engineer",
+      "resumeAttachmentPath": "/path/to/resume.pdf",
+      "linkedinProfile": "https://www.linkedin.com/in/johndoe",
+      "skills": [
+        "JavaScript",
+        "Angular",
+        "TypeScript",
+        "Node.js"
+      ],
+      "imageUrl": "/assets/societes/00000449.png",
+      "title": "Senior Developer",
+      "pays": "USA"
+    },
+    {
       "id": "1",
       "name": "EL MALKI Zineb",
       "email": "zinebelmalki@gmail.com",
@@ -108,6 +134,90 @@
       "password": "0909",
       "role": "candidate",
       "id": "r9dztmD"
+    },
+    {
+      "name": "test",
+      "email": "test27@gmail.com",
+      "password": "0000",
+      "role": "candidate",
+      "id": "EEqfyx5"
+    },
+    {
+      "name": "test",
+      "email": "test254@gmail.com",
+      "password": "999",
+      "role": "candidate",
+      "id": "YIW8z-h"
+    },
+    {
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "0000",
+      "role": "candidate",
+      "id": "LjHL_ej"
+    },
+    {
+      "id": "TFeGzht",
+      "civility": "",
+      "firstName": "",
+      "lastName": "",
+      "country": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "confirmPassword": "",
+      "educationLevel": "",
+      "experience": "",
+      "trainingType": "",
+      "jobTitle": "",
+      "resumeAttachmentPath": "",
+      "linkedinProfile": "",
+      "skills": [],
+      "imageUrl": "",
+      "title": "",
+      "pays": ""
+    },
+    {
+      "id": "vNQmN_n",
+      "civility": "",
+      "firstName": "",
+      "lastName": "",
+      "country": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "confirmPassword": "",
+      "educationLevel": "",
+      "experience": "",
+      "trainingType": "",
+      "jobTitle": "",
+      "resumeAttachmentPath": "",
+      "linkedinProfile": "",
+      "skills": [],
+      "imageUrl": "",
+      "title": "",
+      "pays": ""
+    },
+    {
+      "id": "ZuV5LhO",
+      "civility": "",
+      "firstName": "",
+      "lastName": "",
+      "country": "",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "confirmPassword": "",
+      "educationLevel": "",
+      "experience": "",
+      "trainingType": "",
+      "jobTitle": "",
+      "resumeAttachmentPath": "",
+      "linkedinProfile": "",
+      "skills": [],
+      "imageUrl": "",
+      "title": "",
+      "pays": ""
     }
   ],
   "companies": [
@@ -243,7 +353,7 @@
     {
       "id": "5f4d",
       "title": "cyber security ",
-      "description": "In-depth reports covering a specific cybersecurity issue, often including threat actor tactics, techniques, and procedures; indicators of compromise; and mitigations.",
+      "description": "In-depth reports covering a specific cybersecurity issue.",
       "technology": "python",
       "contrat": null,
       "startdate": "2024-06-01",
@@ -251,5 +361,30 @@
       "societename": "DXC"
     }
   ],
-  "loggedUser": {}
+  "loggedUser": {
+    "id": "11",
+    "civility": "Mr.",
+    "firstName": "John",
+    "lastName": "Doe",
+    "country": "USA",
+    "email": "john.doe@example.com",
+    "phone": "+1 123 456 7890",
+    "password": "securepassword",
+    "confirmPassword": "securepassword",
+    "educationLevel": "Bachelor's Degree",
+    "experience": "5 years",
+    "trainingType": "Full-time",
+    "jobTitle": "Software Engineer",
+    "resumeAttachmentPath": "/path/to/resume.pdf",
+    "linkedinProfile": "https://www.linkedin.com/in/johndoe",
+    "skills": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "Node.js"
+    ],
+    "imageUrl": "/assets/societes/00000449.png",
+    "title": "Senior Developer",
+    "pays": "USA"
+  }
 }

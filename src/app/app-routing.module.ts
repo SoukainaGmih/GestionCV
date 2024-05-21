@@ -30,7 +30,7 @@ const routes: Routes = [
   { path: 'Candidat', component: HeaderCondidatComponent },
   { path: 'main-visitor', component: MainVisiteurComponent },
   { path: 'annonce', component: AnnonceComponent },
-  { path: 'profil', component: ProfilComponent }
+  { path: 'Candidat/profile/:id', component: ProfilComponent }
 
 ];
 

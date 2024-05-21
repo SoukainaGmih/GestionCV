@@ -7,15 +7,11 @@ import { AnnoncesService } from '../../Services/Annonces/annonces.service';
   templateUrl: './main-visiteur.component.html',
   styleUrl: './main-visiteur.component.css'
 })
-export class MainVisiteurComponent implements OnInit{
-
+export class MainVisiteurComponent implements OnInit {
   annonces?: Array<Annonce>;
-  public keyword : string =""
-  public keycompany : string =""
+  public keyword: string = "";
 
-  constructor(private annoncesService: AnnoncesService) {
-
-  }
+  constructor(private annoncesService: AnnoncesService) {}
 
   ngOnInit(): void {
     this.getAnnonces();
@@ -25,29 +21,22 @@ export class MainVisiteurComponent implements OnInit{
     this.annoncesService.getAnnonces().subscribe({
       next: data => this.annonces = data,
       error: err => {
-        console.log(err)
+        console.log(err);
       }
-
-    })
-  }
-
-  public searchPoste() {
-    this.annoncesService.searchPoste(this.keyword).subscribe({
-      next: candidatbyname => {
-        this.annonces = candidatbyname
-      },
-      error: err => console.error('Observer got an error: ' + err),
-      complete: () => console.log('Observer got a complete notification'),
     });
   }
 
-  public searchCompany() {
-    this.annoncesService.searchCompany(this.keycompany).subscribe({
-      next: candidatbyname => {
-        this.annonces = candidatbyname
-      },
-      error: err => console.error('Observer got an error: ' + err),
-      complete: () => console.log('Observer got a complete notification'),
-    });
+  public searchWithKeyword() {
+    if (this.keyword) {
+      this.annoncesService.searchWithKeyword(this.keyword).subscribe({
+        next: result => {
+          this.annonces = result;
+        },
+        error: err => console.error('Observer got an error: ' + err),
+        complete: () => console.log('Observer got a complete notification'),
+      });
+    } else {
+      this.getAnnonces(); 
+    }
   }
 }

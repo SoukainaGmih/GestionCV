@@ -1,27 +1,69 @@
-<div class="container">
-
-    <div *ngIf="candidats as candidatList">
-        <div *ngFor="let candidat of candidatList">
-            <img alt="" src="" />
-            <p><strong>Name : {{candidat.name}}</strong></p>
-            <p><strong>Profile : {{candidat.title}} </strong></p>
-            <p><strong>Email :{{candidat.email}} </strong></p>
-            <p><strong>Pays : </strong>{{candidat.pays}}</p>
-            <p><strong>Technology :</strong>{{candidat.technologies}}</p>
-        </div>
-        <p><strong>Skills : </strong></p>
-        <p>skill title : </p>
-        <p>skill level</p>
-        <p><strong>experiences: </strong> </p>
-        <p>company</p>
-        <p>Poste</p>
-        <p>starts at</p>
-        <p>ends at</p>
-        <p>region</p>
-        <p>languages: </p>
-        <p>langage</p>
-        <p>level</p>
-
+<!-- <div class="container">
+  <h2>Candidates List</h2>
+  <div *ngIf="candidats.length === 0">
+    <p>No candidates found.</p>
+  </div>
+  <div *ngFor="let candidat of candidats" class="candidat-card">
+    <div class="card">
+      <div class="card-header">
+        <h3>{{ candidat.title }} {{ candidat.firstName }} {{ candidat.lastName }}</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Civility:</strong> {{ candidat.civility }}</p>
+        <p><strong>First Name:</strong> {{ candidat.firstName }}</p>
+        <p><strong>Last Name:</strong> {{ candidat.lastName }}</p>
+        <p><strong>Country:</strong> {{ candidat.country }}</p>
+        <p><strong>Email:</strong> {{ candidat.email }}</p>
+        <p><strong>Phone:</strong> {{ candidat.phone }}</p>
+        <p><strong>Education Level:</strong> {{ candidat.educationLevel }}</p>
+        <p><strong>Experience:</strong> {{ candidat.experience }}</p>
+        <p><strong>Training Type:</strong> {{ candidat.trainingType }}</p>
+        <p><strong>Job Title:</strong> {{ candidat.jobTitle }}</p>
+        <p><strong>Resume Attachment Path:</strong> <a [href]="candidat.resumeAttachmentPath" target="_blank">Download</a></p>
+        <p><strong>LinkedIn Profile:</strong> <a [href]="candidat.linkedinProfile" target="_blank">{{ candidat.linkedinProfile }}</a></p>
+        <p><strong>Skills:</strong> {{ candidat.skills.join(', ') }}</p>
+        <img *ngIf="candidat.imageUrl" [src]="candidat.imageUrl" alt="{{ candidat.firstName }} {{ candidat.lastName }}" class="img-thumbnail">
+      </div>
     </div>
+  </div>
+</div> -->
 
-</div>
+<div *ngIf="candidateInfo">
+    <h2>Candidate Information</h2>
+    <p><strong>Name:</strong> {{ candidateInfo }}</p>
+    <p><strong>Email:</strong> {{ candidateInfo.email }}</p>
+    <p><strong>Phone:</strong> {{ candidateInfo.phone }}</p>
+    <!-- Add more fields as needed -->
+  </div>
+  
+  <div *ngIf="!candidateInfo">
+    <p>No candidate information found for the logged-in user.</p>
+  </div>
+
+<style>
+  .container {
+    margin: 20px;
+  }
+  .candidat-card {
+    margin-bottom: 20px;
+  }
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .card-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  .card-body p {
+    margin: 5px 0;
+  }
+  .img-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+    margin-top: 10px;
+  }
+</style>

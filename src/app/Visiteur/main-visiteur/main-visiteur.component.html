@@ -1,50 +1,24 @@
 <div class="container">
-    <div class="formgrid grid">
-        <div class="field col">
-            <input id="" type="text" placeholder="technology" [(ngModel)]="keyword"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div>
-        <div class="field col">
-            <input id="" type="text" placeholder="company" [(ngModel)]="keycompany"
-                class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
-        </div>
-        <p-button icon="pi pi-search" (click)="keyword ? searchPoste() :  searchCompany()" [rounded]="true"
-            [text]="true" />
-    </div>
-
-
-    <div class="grid" *ngIf="annonces as annoncesList">
-
-        <p-card *ngFor="let annonce of annoncesList" header="{{annonce.societename}}" subheader="{{annonce.title}}"
-            [style]="{ width: '400px', height : '400px' }">
-            <ng-template pTemplate="header">
-
-                <!-- <img alt="Card" src="" /> -->
-            </ng-template>
-            <div>
-
-                <!-- <p *ngFor="let techno of" > JAVA, Angular</p> -->
-                <p>{{annonce.description}}</p>
-
-            </div>
-            <div>
-                <p><strong>Technology : </strong>{{annonce.technology}}</p>
-            </div>
-            <div>
-                <p><strong>Start at : </strong>{{annonce.startdate}}</p>
-            </div>
-            <div>
-                <p><strong>Published at : </strong>{{annonce.createdat}}</p>
-            </div>
-            <ng-template pTemplate="footer">
-                <div class="flex gap-3 mt-1">
-                    <p-button label="Apply" routerLink="/login" severity="warning" class="w-full" styleClass="w-full" />
-                </div>
-            </ng-template>
-        </p-card>
-
-
-    </div>
+  <div class="formgrid grid">
+      <div class="field col">
+          <input type="text" placeholder="Search" [(ngModel)]="keyword"
+              class="text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full">
+              <button class="btn-search" (click)="searchWithKeyword()"><i class="fas fa-search"></i></button>
+      </div>
+      
+  </div>
 </div>
 
-<router-outlet></router-outlet>
+<div class="band" *ngIf="annonces">
+  <div class="item" *ngFor="let annonce of annonces">
+      <a href="" class="card">
+          <div class="thumb"></div>
+          <article>
+              <h1>{{annonce.societename}}</h1>
+              <h5>{{annonce.title}}</h5>
+              <p>{{annonce.description}}</p>
+              <span>Date : {{annonce.startdate}} - {{annonce.createdat}} </span>
+          </article>
+      </a>
+  </div>
+</div>
