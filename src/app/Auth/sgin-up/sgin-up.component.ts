@@ -11,7 +11,7 @@ import { CandidatsService } from '../../Services/candidats/candidats.service';
 })
 export class SginUpComponent {
   formData: Candidat = {
-    id: 0,  // Initial ID, may be updated later
+    id: 0, 
     civility: '',
     firstName: '',
     lastName: '',
@@ -24,9 +24,9 @@ export class SginUpComponent {
     experience: '',
     trainingType: '',
     jobTitle: '',
-    resumeAttachmentPath: '', // Initially empty, will be set when file is uploaded
+    resumeAttachmentPath: '', 
     linkedinProfile: '',
-    skills: [],  // Empty array for skills
+    skills: [], 
     imageUrl: '',
     title: '',
     pays: ''

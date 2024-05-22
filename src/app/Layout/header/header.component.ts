@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
@@ -20,6 +20,8 @@ export class HeaderComponent implements OnInit {
   loggedUser: any;
 
   ngOnInit() {
+    this.onWindowScroll();
+
     this.items = [
       {
         label: 'File',
@@ -168,6 +170,18 @@ export class HeaderComponent implements OnInit {
       }
     }
   });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    const header = document.getElementById('header');
+    if (header) {
+      if (window.pageYOffset > 0) {
+        header.classList.add('on-scroll');
+      } else {
+        header.classList.remove('on-scroll');
+      }
+    }
   }
 
   async getLoggedUser() {

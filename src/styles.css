@@ -98,7 +98,7 @@ video {
   max-width: 75rem;
   height: auto;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 3.25rem;
 }
 
 .centered {
@@ -195,7 +195,7 @@ video {
 }
 .header.on-scroll {
   background: var(--color-black-300);
-  box-shadow: var(--shadow-medium);
+  box-shadow: var(--shadow-large);
 }
 
 .navbar {

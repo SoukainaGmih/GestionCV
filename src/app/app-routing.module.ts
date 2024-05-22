@@ -12,6 +12,7 @@ import { AnnonceComponent } from './Societes/annonce/annonce.component';
 import { ProfilComponent } from './Candidat/profil/profil.component';
 import { AuthGuardService } from './Services/Gaurds/auth-guard.service';
 import { AuthGuardCaService } from './Services/Guards/auth-guard-ca.service';
+import { FooterComponent } from './Layout/footer/footer.component';
 
 const routes: Routes = [
   {

@@ -28,17 +28,10 @@ export class SginInComponent implements OnInit {
   password!: string;
 
   constructor(public router: Router, public logoffService: LogoffService, private auth: AuthService) { }
-
   OnLoginClicked() {
     const username = this.username.nativeElement.value;
     const pass = this.pass.nativeElement.value;
-
-
-
   }
-
-
-
   async onRegister(form: NgForm) {
     if (form.invalid) {
       alert('Please fill in all required fields.');

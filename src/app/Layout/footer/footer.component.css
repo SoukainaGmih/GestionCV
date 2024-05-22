@@ -1,59 +1,138 @@
-:root {
-    --color-blue-600: #007BFF;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* Importing Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
 .footer {
-    background-color: var(--color-blue-600);
-    color: white;
-    padding: 20px 0;
+  position: relative;
+  width: 100%;
+  background: var(--color-blue-600);
+  border-radius: 70px 70px 0 0;
+  margin-top: 20px;
+  background-image: url(/assets/images/footer-1.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 20px;
+.footer .footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 30px 60px;
 }
 
-.footer-section {
-    flex: 1;
-    margin: 0 20px;
+.footer-row .footer-col h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
-.footer-section h2 {
-    margin-bottom: 10px;
+.footer-col{
+    width: 190px;
 }
 
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
+.footer-col:nth-child(4){
+    width: 300px;
 }
 
-.footer-section ul li {
-    margin-bottom: 10px;
+.footer-col .links {
+  margin-top: 20px;
 }
 
-.footer-section ul li a {
-    color: white;
-    text-decoration: none;
+.footer-col .links li {
+  list-style: none;
+  margin-bottom: 10px;
 }
 
-.footer-section ul li a:hover {
-    text-decoration: underline;
+.footer-col .links li a {
+  text-decoration: none;
+  color: var(--color-white-300);
 }
 
-.footer-bottom {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid white;
+.footer-col .links li a:hover {
+  color: var(--color-blue-800);
+}
+
+.footer-col p {
+  margin: 20px 0;
+  color: var(--color-white-300);
+  max-width: 300px;
+}
+
+.footer-col form {
+  display: flex;
+  gap: 5px;
+}
+
+.footer-col input {
+  height: 40px;
+  border-radius: 6px;
+  background: none;
+  width: 100%;
+  outline: none;
+  border: 1px solid var(--color-blue-800) ;
+  caret-color: #fff;
+  color: #fff;
+  padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+  color: var(--color-white-300);
+}
+
+ .footer-col form button {
+  background: #fff;
+  outline: none;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+  background: var(--color-blue-800);
+}
+
+.footer-col .icons {
+  display: flex;
+  margin-top: 30px;
+  gap: 30px;
+  cursor: pointer;
+}
+
+.footer-col .icons i {
+  color: var(--color-white-300);
+}
+
+.footer-col .icons i:hover  {
+  color: var(--color-blue-800);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .footer .footer-row {
+    padding: 20px;
+    gap: 1rem;
+  }
+
+  .footer-col form {
+    display: block;
+  }
+
+  .footer-col form :where(input, button) {
+    width: 100%;
+  }
+
+  .footer-col form button {
+    margin: 10px 0 0 0;
+  }
 }

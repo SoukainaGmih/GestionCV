@@ -95,29 +95,11 @@
     }
   ],
   "loggedUser": {
-    "id": "11",
-    "civility": "Mr.",
-    "firstName": "John",
-    "lastName": "Doe",
-    "country": "USA",
-    "email": "john.doe@example.com",
-    "phone": "+1 123 456 7890",
-    "password": "securepassword",
-    "confirmPassword": "securepassword",
-    "educationLevel": "Bachelor's Degree",
-    "experience": "5 years",
-    "trainingType": "Full-time",
-    "jobTitle": "Software Engineer",
-    "resumeAttachmentPath": "/path/to/resume.pdf",
-    "linkedinProfile": "https://www.linkedin.com/in/johndoe",
-    "skills": [
-      "JavaScript",
-      "Angular",
-      "TypeScript",
-      "Node.js"
-    ],
-    "imageUrl": "/assets/societes/00000449.png",
-    "title": "Senior Developer",
-    "pays": "USA"
+    "name": "Tech Corp",
+    "email": "info@techcorp.com",
+    "role": "company",
+    "industry": "Technology",
+    "id": "27d3",
+    "password": "azertyuiop"
   }
 }
