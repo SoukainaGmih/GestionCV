@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'Candidat', component: HeaderCondidatComponent, canActivate: [AuthGuardCaService] },
   { path: 'main-visitor', component: MainVisiteurComponent },
   { path: 'annonce', component: AnnonceComponent, canActivate: [AuthGuardService] },
-  { path: 'profil', component: ProfilComponent }
+  { path: 'Candidat/profile/:id', component: ProfilComponent }
 
 ];
 

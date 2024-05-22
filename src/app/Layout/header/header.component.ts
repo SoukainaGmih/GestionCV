@@ -3,6 +3,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { LogoffService } from '../../Services/LogOff/logoff.service';
 import { AuthService } from '../../Services/Auth/auth.service';
+import { AnnoncesService } from '../../Services/Annonces/annonces.service';
+import { SearchService } from '../../Services/Search/search.service';
 
 @Component({
   selector: 'app-header',
@@ -16,7 +18,6 @@ export class HeaderComponent implements OnInit {
   showProfileCard: boolean = false;
   isLoggedIn: boolean = false;
   loggedUser: any;
-
 
   ngOnInit() {
     this.items = [
@@ -147,41 +148,41 @@ export class HeaderComponent implements OnInit {
         icon: 'pi pi-fw pi-power-off'
       }
     ];
-
+    this.logoffService.isLoggedIn$.subscribe((loggedIn: boolean) => {
+      this.isLoggedIn = loggedIn;
+  });
   }
+  constructor(private router: Router , public logoffService: LogoffService ,private annoncesService: AnnoncesService
+    ,private searchService: SearchService, private auth: AuthService
+  ) {
+  this.getLoggedUser();
 
-
-
-
-
-
-  constructor(private router: Router, public logoffService: LogoffService, private auth: AuthService) {
-    this.getLoggedUser();
-    this.router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {
-        if (this.router.url.includes('/Candidat') || this.router.url.includes('/postulation')) {
-          this.currentMenu = 'candidate';
-        } else if (this.router.url.includes('/Company') || this.router.url.includes('/publish-announcement')) {
-          this.currentMenu = 'company';
-        } else {
-          this.currentMenu = 'home';
-        }
+  this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      if (this.router.url.includes('/Candidat') || this.router.url.includes('/postulation')) {
+        this.currentMenu = 'candidate';
+      } else if (this.router.url.includes('/Company') || this.router.url.includes('/publish-announcement')) {
+        this.currentMenu = 'company';
+      } else {
+        this.currentMenu = 'home';
       }
-    });
+    }
+  });
   }
 
   async getLoggedUser() {
-    try {
-      const response = await fetch('http://localhost:3000/loggedUser');
-      const user = await response.json();
-      if (user && Object.keys(user).length > 0) {
-        this.loggedUser = user;
-      }
-    } catch (error) {
-      console.error('Error fetching logged user:', error);
+  try {
+    const response = await fetch('http://localhost:3000/loggedUser');
+    const user = await response.json();
+    if (user && Object.keys(user).length > 0) {
+      this.loggedUser = user;
+      console.log(this.loggedUser);
+      console.log(user.id);
+    }
+  } catch (error) {
+    console.error('Error fetching logged user:', error);
     }
   }
-
   async onLogoff() {
     try {
       const options = {
@@ -199,14 +200,8 @@ export class HeaderComponent implements OnInit {
       console.error('Error during logoff:', error);
     }
     this.logoffService.logoff();
-
-
   }
   toggleProfileCard() {
     this.showProfileCard = !this.showProfileCard;
   }
-
-
-
-
 }

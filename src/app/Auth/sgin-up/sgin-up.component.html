@@ -14,97 +14,146 @@
          </div>
       </div>
       <div class="form-outer">
-         <form (submit)="onSubmit($event)">
+         <form (ngSubmit)="onSubmit()">
             <div class="page slide-page" [style.marginLeft]="marginLeft">
-                <div class="title">Basic Info:</div>
-                <!-- <div class="field">
-                   <div class="label">First Name</div>
-                   <input type="text">
-                </div>
-                <div class="field">
-                   <div class="label">Last Name</div>
-                   <input type="text">
-                </div> -->
-
                <div class="grid">
                   <div class="col-6">
                      <div class="field">
-                        <div class="label">First Name</div>
-                        <input type="text">
+                        <div class="label">Civility *</div>
+                        <select [(ngModel)]="formData.civility" name="civility" required>
+                           <option></option>
+                           <option value="Mademoiselle">Mademoiselle</option>
+                           <option value="Madame">Madame</option>
+                           <option value="Monsieur">Monsieur</option>
+                        </select>
                      </div>
                   </div>
                   <div class="col-6">
                      <div class="field">
-                        <div class="label">Last Name</div>
-                        <input type="text">
+                        <div class="label">First Name *</div>
+                        <input type="text" [(ngModel)]="formData.firstName" name="firstName" required>
                      </div>
                   </div>
                   <div class="col-6">
                      <div class="field">
-                        <div class="label">First Name</div>
-                        <input type="text">
+                        <div class="label">Last Name *</div>
+                        <input type="text" [(ngModel)]="formData.lastName" name="lastName" required>
                      </div>
                   </div>
                   <div class="col-6">
                      <div class="field">
-                        <div class="label">Last Name</div>
-                        <input type="text">
+                        <div class="label">Pays de résidence *</div>
+                        <input type="text" [(ngModel)]="formData.country" name="country" required>
                      </div>
                   </div>
                </div>
-
-                <div class="field">
-                   <button type="button" class="firstNext next" (click)="nextStep($event)">Next</button>
-                </div>
+               <div class="field">
+                  <button type="button" class="firstNext next" (click)="nextStep($event)">Next</button>
+               </div>
             </div>
             <div class="page">
-                <div class="title">Contact Info:</div>
-                <div class="field">
-                   <div class="label">Email Address</div>
-                   <input type="text">
-                </div>
-                <div class="field">
-                   <div class="label">Phone Number</div>
-                   <input type="Number">
-                </div>
-                <div class="field btns">
-                   <button type="button" class="prev-1 prev" (click)="prevStep($event)">Previous</button>
-                   <button type="button" class="next-1 next" (click)="nextStep($event)">Next</button>
-                </div>
+               <div class="grid">
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Email Address *</div>
+                     <input type="email" [(ngModel)]="formData.email" name="email" required>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Phone Number *</div>
+                     <input type="tel" [(ngModel)]="formData.phone" name="phone" required>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Mot de passe *</div>
+                     <input type="password" [(ngModel)]="formData.password" name="password" required>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Confirmation Mot de passe *</div>
+                     <input type="password" [(ngModel)]="formData.confirmPassword" name="confirmPassword" required>
+                   </div>
+                 </div>
+               </div>
+               <div class="field btns">
+                 <button type="button" class="prev-1 prev" (click)="prevStep($event)">Previous</button>
+                 <button type="button" class="next-1 next" (click)="nextStep($event)">Next</button>
+               </div>
             </div>
             <div class="page">
-                <div class="title">Date of Birth:</div>
-                <div class="field">
-                   <div class="label">Date</div>
-                   <input type="text">
-                </div>
-                <div class="field">
-                   <div class="label">Gender</div>
-                   <select>
-                      <option>Male</option>
-                      <option>Female</option>
-                      <option>Other</option>
-                   </select>
-                </div>
-                <div class="field btns">
-                   <button type="button" class="prev-2 prev" (click)="prevStep($event)">Previous</button>
-                   <button type="button" class="next-2 next" (click)="nextStep($event)">Next</button>
-                </div>
-            </div>
-            <div class="page">
-                <div class="title">Login Details:</div>
-                <div class="field">
-                   <div class="label">Username</div>
-                   <input type="text">
-                </div>
-                <div class="field">
-                   <div class="label">Password</div>
-                   <input type="password">
-                </div>
-                <div class="field btns">
-                   <button type="button" class="prev-3 prev" (click)="prevStep($event)">Previous</button>
-                   <button type="submit" class="submit">Submit</button>
-                </div>
+               <div class="grid">
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Niveau d'études *</div>
+                     <select [(ngModel)]="formData.educationLevel" name="educationLevel" required>
+                       <option></option>
+                       <option value="Autodidacte">Autodidacte</option>
+                       <option value="Qualification avant Bac">Qualification avant Bac</option>
+                       <option value="Bac">Bac</option>
+                       <option value="Bac + 1">Bac + 1</option>
+                       <option value="Bac + 2">Bac + 2</option>
+                       <option value="Bac + 3">Bac + 3</option>
+                       <option value="Bac + 4">Bac + 4</option>
+                       <option value="Bac +5 et plus">Bac +5 et plus</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Expérience *</div>
+                     <select [(ngModel)]="formData.experience" name="experience" required>
+                       <option></option>
+                       <option value="Débutant">Débutant</option>
+                       <option value="Moins de 1 an">Moins de 1 an</option>
+                       <option value="De 1 à 3 ans">De 1 à 3 ans</option>
+                       <option value="De 3 à 5 ans">De 3 à 5 ans</option>
+                       <option value="De 5 à 10 ans">De 5 à 10 ans</option>
+                       <option value="Plus de 10 ans">Plus de 10 ans</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Type de formation *</div>
+                     <select [(ngModel)]="formData.trainingType" name="trainingType" required>
+                       <option></option>
+                       <option value="Doctorat / DEA">Doctorat / DEA</option>
+                       <option value="Master">Master</option>
+                       <option value="BTS / DUT">BTS / DUT</option>
+                       <option value="Formation professionnelle">Formation professionnelle</option>
+                       <option value="Formation spécialisée">Formation spécialisée</option>
+                       <option value="Ecole d'ingénieur">Ecole d'ingénieur</option>
+                     </select>
+                   </div>
+                 </div>
+                 <div class="col-6">
+                   <div class="field">
+                     <div class="label">Titre du poste actuel *</div>
+                     <input type="text" [(ngModel)]="formData.jobTitle" name="jobTitle" required>
+                   </div>
+                 </div>
+               </div>
+               <div class="field btns">
+                 <button type="button" class="prev-2 prev" (click)="prevStep($event)">Previous</button>
+                 <button type="button" class="next-2 next" (click)="nextStep($event)">Next</button>
+               </div>
+             </div>
+             <div class="page">
+               <div class="field">
+                 <div class="label">Attachement du CV 1Mo (pdf,word) *</div>
+                 <input type="file" (change)="onFileChange($event)" required>
+               </div>
+               <div class="field">
+                 <div class="label">URL de votre profil Linkedin (optionnel)</div>
+                 <input type="url" [(ngModel)]="formData.linkedinProfile" name="linkedinProfile">
+               </div>
+               <div class="field btns">
+                 <button type="button" class="prev-3 prev" (click)="prevStep($event)">Previous</button>
+                 <button type="submit" class="submit">Submit</button>
+               </div>
             </div>
          </form>
       </div>

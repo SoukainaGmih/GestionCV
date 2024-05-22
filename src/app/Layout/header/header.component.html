@@ -1,5 +1,4 @@
 <header class="header" id="header">
-
    <nav class="navbar container">
       <a [routerLink]="['/home']" class="brand">LogoName</a>
       <div class="burger" id="burger">
@@ -8,49 +7,58 @@
          <span class="burger-line"></span>
       </div>
       <div class="menu" id="menu">
-
-
-         <ul *ngIf="currentMenu === 'home'" class="menu-inner">
-            <li class="menu-item"><a [routerLink]="['/home']" class="menu-link">Home</a></li>
-            <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Condidat</a></li>
-            <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Company</a></li>
-            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
-            <form class="d-flex" *ngIf="isLoggedIn">
-               <span class="text-white">{{loggedUser?.email}} </span>
-               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
-            </form>
-         </ul>
-
-
-         <ul *ngIf="currentMenu === 'candidate'" class="menu-inner">
-            <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Home</a></li>
-            <li class="menu-item"><a [routerLink]="['/postulation']" class="menu-link">Postulation</a></li>
-            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
-            <form class="d-flex" *ngIf="isLoggedIn">
-               <span class="text-white">{{loggedUser?.email}} </span>
-               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
-            </form>
-         </ul>
-
-
-         <ul *ngIf="currentMenu === 'company'" class="menu-inner">
-            <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Home</a></li>
-            <li class="menu-item"><a [routerLink]="['/annonce']" class="menu-link">Post an announcement</a>
-            </li>
-            <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
-            <li class="menu-item"><a [routerLink]="['/home']" class="menu-link"
-                  [queryParams]="{logout : true}">logout</a></li>
-            <form class="d-flex" *ngIf="isLoggedIn">
-               <span class="text-white">{{loggedUser?.email}} </span>
-               <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
-            </form>
-         </ul>
-
-
+      <ul *ngIf="currentMenu === 'home'" class="menu-inner">
+         <li class="menu-item"><a [routerLink]="['/home']" class="menu-link">Home</a></li>
+         <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Condidat</a></li>
+         <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Company</a></li>
+         <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+         <!-- <div class="search-box">
+            <button class="btn-search"><i class="fas fa-search"></i></button>
+            <input type="text" class="input-search" placeholder=" Search with ....">
+         </div> --> 
          <!-- <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li> -->
-
-
-
+         <form class="d-flex"  *ngIf="isLoggedIn">
+               <p-avatar 
+                     icon="pi pi-user" 
+                     styleClass="mr-2" 
+                     shape="circle"
+                     (click)="toggleProfileCard()">
+                  </p-avatar>
+                  <div *ngIf="showProfileCard" class="profile-card">
+                     <figure class="snip1336">
+                        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample87.jpg" alt="sample87" />
+                        <figcaption>
+                           <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample4.jpg" alt="profile-sample4" class="profile" />
+                           <h2>{{loggedUser?.firstName}} {{loggedUser?.lastName}}<span>{{loggedUser?.email}}</span></h2>
+                           <li><i class="fa-solid fa-user mr-3 ml-1 "></i><a class="text-white hover:text-[#2463eb]" [routerLink]="['/sginup']">Espace</a></li>
+                           <li (click)="onLogoff()"><i class="fa-solid fa-right-to-bracket mr-3  ml-1"></i>LogOff</li>                          
+                        </figcaption>
+                     </figure>
+                  </div>
+         </form>
+      </ul>
+      <ul *ngIf="currentMenu === 'candidate'" class="menu-inner">
+         <li class="menu-item"><a [routerLink]="['/Candidat']" class="menu-link">Home</a></li>
+         <li class="menu-item"><a [routerLink]="['/postulation']" class="menu-link">Postulation</a></li>
+         <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+         <form class="d-flex" *ngIf="isLoggedIn">
+            <span class="text-white">{{loggedUser?.email}} </span>
+            <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
+         </form>
+      </ul>
+      <ul *ngIf="currentMenu === 'company'" class="menu-inner">
+         <li class="menu-item"><a [routerLink]="['/Company']" class="menu-link">Home</a></li>
+         <li class="menu-item"><a [routerLink]="['/annonce']" class="menu-link">Post an announcement</a>
+         </li>
+         <li class="menu-item"><a [routerLink]="['/support']" class="menu-link">Support</a></li>
+         <li class="menu-item"><a [routerLink]="['/home']" class="menu-link"
+               [queryParams]="{logout : true}">logout</a></li>
+         <form class="d-flex" *ngIf="isLoggedIn">
+            <span class="text-white">{{loggedUser?.email}} </span>
+            <button class="menu-block" type="button" (click)="onLogoff()">LogOff</button>
+         </form>
+      </ul>
+      <!-- <li class="menu-item"><a [routerLink]="['/login']" class="menu-link">Sigin</a></li> -->
       </div>
       <a *ngIf="currentMenu === 'home'" [routerLink]="['/login']" class="menu-block">Join us</a>
    </nav>

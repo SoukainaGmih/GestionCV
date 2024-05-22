@@ -1,11 +1,21 @@
 export interface Candidat {
-    id: number,
-    name: string,
-    title: string,
-    technologies: string[],
+    id:number,
+    civility: string,
+    firstName: string,
+    lastName: string,
+    country: string,
     email: string,
-    imageUrl: string,
-    pays: string,
+    phone: string,
+    password: string,
+    confirmPassword: string,
+    educationLevel: string,
+    experience: string,
+    trainingType: string,
+    jobTitle: string,
+    resumeAttachmentPath: string,
+    linkedinProfile: string,
     skills: string[],
-    password: String
+    imageUrl: string,
+    title: string,
+    pays: string
 }

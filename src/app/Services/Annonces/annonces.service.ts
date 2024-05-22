@@ -30,6 +30,15 @@ export class AnnoncesService {
 
     return this.http.get<Annonce[]>('http://localhost:3000/annonce').pipe(
       map(annonces => annonces.filter(annonce => annonce.societename.toLowerCase().includes(keyword.toLowerCase()))))
+  } 
+
+  public searchWithKeyword(keyword: string): Observable<Array<Annonce>> {
+    return this.http.get<Annonce[]>('http://localhost:3000/annonce').pipe(
+      map(annonces => annonces.filter(annonce => 
+        annonce.technology.toLowerCase().includes(keyword.toLowerCase()) || 
+        annonce.societename.toLowerCase().includes(keyword.toLowerCase())
+      ))
+    );
   }
 
 

@@ -15,14 +15,14 @@
 
     <div class="grid" *ngIf="candidats as candidatList">
 
-        <p-card *ngFor="let candidat of candidatList" header="{{candidat.name}}" subheader="{{candidat.title}}"
+        <p-card *ngFor="let candidat of candidatList" header="{{candidat.firstName}}" subheader="{{candidat.title}}"
             [style]="{ width: '300px', height : '600px' }">
             <ng-template pTemplate="header">
                 <img alt="Card" src="{{candidat.imageUrl}}" />
             </ng-template>
             <div>
                 <!-- <p *ngFor="let techno of" > JAVA, Angular</p> -->
-                <p>{{candidat.technologies}}</p>
+                <p>{{candidat.skills}}</p>
 
             </div>
             <div>

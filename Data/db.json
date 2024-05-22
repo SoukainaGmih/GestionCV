@@ -1,110 +1,30 @@
 {
   "candidates": [
     {
-      "id": "1",
-      "name": "EL MALKI Zineb",
-      "email": "zinebelmalki@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "Java",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
+      "id": "11",
+      "civility": "Mr.",
+      "firstName": "John",
+      "lastName": "Doe",
+      "country": "USA",
+      "email": "john.doe@example.com",
+      "phone": "+1 123 456 7890",
+      "password": "securepassword",
+      "confirmPassword": "securepassword",
+      "educationLevel": "Bachelor's Degree",
+      "experience": "5 years",
+      "trainingType": "Full-time",
+      "jobTitle": "Software Engineer",
+      "resumeAttachmentPath": "/path/to/resume.pdf",
+      "linkedinProfile": "https://www.linkedin.com/in/johndoe",
       "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "Beginner"
-        }
-      ],
-      "password": "123456"
-    },
-    {
-      "id": "2",
-      "name": "GMIH Soukain",
-      "email": "gmihsoukaina@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        ".Net",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": ".net",
-          "level": "Beginner"
-        }
-      ],
-      "password": "123456"
-    },
-    {
-      "id": "3",
-      "name": "HADDOUDI Abdelkarim",
-      "email": "abdelkarimhaddoudi@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "JAVA",
+        "JavaScript",
         "Angular",
-        "python"
+        "TypeScript",
+        "Node.js"
       ],
       "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Egypt",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "Beginner"
-        }
-      ],
-      "password": "123456"
-    },
-    {
-      "id": "4",
-      "name": "EL MALKI Zineb",
-      "email": "zinebelmalki@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "Java",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "advanced"
-        }
-      ],
-      "password": "123456"
-    },
-    {
-      "id": "0416",
-      "name": "test",
-      "email": "test5@gmail.com",
-      "password": "123456",
-      "role": "candidate"
-    },
-    {
-      "id": "c787",
-      "name": "Zineb EL MALKI",
-      "email": "zinebelmalki0602@gmail.com",
-      "password": "azertyuiop",
-      "role": "candidate"
-    },
-    {
-      "id": "a4af",
-      "name": "Zineb EL MALKI",
-      "email": "meryemouali16@gmail.com",
-      "password": "azertyuiop",
-      "role": "candidate"
+      "title": "Senior Developer",
+      "pays": "USA"
     }
   ],
   "companies": [
@@ -131,83 +51,6 @@
       "industry": "Finance",
       "id": "3421",
       "password": "azertyuiop"
-    },
-    {
-      "id": "65a6",
-      "name": "",
-      "email": "soukaina2387@gmail.com",
-      "role": "company",
-      "password": "azertyuiop"
-    },
-    {
-      "id": "2888",
-      "name": "test",
-      "email": "test2@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "id": "dea2",
-      "name": "test",
-      "email": "test3@gmail.com",
-      "password": "azertyuiop",
-      "role": "company"
-    },
-    {
-      "name": "test",
-      "email": "test7@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "vRwyDGo"
-    },
-    {
-      "name": "test",
-      "email": "test31@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "GnKJ29G"
-    },
-    {
-      "name": "test",
-      "email": "test13@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "-tJdD27"
-    },
-    {
-      "name": "test",
-      "email": "test21@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "ZBrULf0"
-    },
-    {
-      "name": "test",
-      "email": "test22@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "C4PEG19"
-    },
-    {
-      "name": "test",
-      "email": "test26@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "-pRFqz3"
-    },
-    {
-      "name": "test",
-      "email": "test25@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "wwisO1P"
-    },
-    {
-      "name": "test",
-      "email": "test23@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "y-m-ULF"
     }
   ],
   "annonce": [
@@ -221,7 +64,7 @@
       "societename": "societe name"
     },
     {
-      "id": "2cfa",
+      "id": "2",
       "title": "java developer",
       "description": "java developer description",
       "technology": "java",
@@ -231,7 +74,7 @@
       "societename": "jobintech"
     },
     {
-      "id": "1958",
+      "id": "3",
       "title": "data analyst",
       "description": "data analyst description",
       "technology": "python, sql ",
@@ -241,9 +84,9 @@
       "societename": "capgemini"
     },
     {
-      "id": "5f4d",
+      "id": "4",
       "title": "cyber security ",
-      "description": "In-depth reports covering a specific cybersecurity issue, often including threat actor tactics, techniques, and procedures; indicators of compromise; and mitigations.",
+      "description": "In-depth reports covering a specific cybersecurity issue.",
       "technology": "python",
       "contrat": null,
       "startdate": "2024-06-01",
@@ -252,24 +95,29 @@
     }
   ],
   "loggedUser": {
-    "id": "1",
-    "name": "EL MALKI Zineb",
-    "email": "zinebelmalki@gmail.com",
-    "title": "full stack developer",
-    "technologies": [
-      "Java",
-      "Angular"
+    "id": "11",
+    "civility": "Mr.",
+    "firstName": "John",
+    "lastName": "Doe",
+    "country": "USA",
+    "email": "john.doe@example.com",
+    "phone": "+1 123 456 7890",
+    "password": "securepassword",
+    "confirmPassword": "securepassword",
+    "educationLevel": "Bachelor's Degree",
+    "experience": "5 years",
+    "trainingType": "Full-time",
+    "jobTitle": "Software Engineer",
+    "resumeAttachmentPath": "/path/to/resume.pdf",
+    "linkedinProfile": "https://www.linkedin.com/in/johndoe",
+    "skills": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "Node.js"
     ],
     "imageUrl": "/assets/societes/00000449.png",
-    "pays": "Maroc",
-    "role": "candidate",
-    "skills": [
-      {
-        "id": "1",
-        "title": "Java",
-        "level": "Beginner"
-      }
-    ],
-    "password": "123456"
+    "title": "Senior Developer",
+    "pays": "USA"
   }
 }
