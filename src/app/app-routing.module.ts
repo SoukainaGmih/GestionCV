@@ -10,26 +10,33 @@ import { HeaderCondidatComponent } from './Candidat/header-condidat/header-condi
 import { MainVisiteurComponent } from './Visiteur/main-visiteur/main-visiteur.component';
 import { AnnonceComponent } from './Societes/annonce/annonce.component';
 import { ProfilComponent } from './Candidat/profil/profil.component';
+import { AuthGuardService } from './Services/Gaurds/auth-guard.service';
+import { AuthGuardCaService } from './Services/Guards/auth-guard-ca.service';
+import { FooterComponent } from './Layout/footer/footer.component';
 
 const routes: Routes = [
-  { path: '',
+  {
+    path: '',
     redirectTo: '/home',
     pathMatch: 'full'
   },
-  { path: 'home',
+  {
+    path: 'home',
     component: HeaderVisiteurComponent,
     children: [
-     //{ path: '', component:  },
+      // { path: 'Company', component: HeaderCompanyComponent, canActivate: [AuthGuardService] },
+      // { path: 'Candidat', component: HeaderCondidatComponent, canActivate: [AuthGuardService] },
+      // { path: 'login', component: SginInComponent }
     ]
-    },
+  },
   { path: 'login', component: SginInComponent },
   { path: 'sginup', component: SginUpComponent },
   { path: 'condidat-home', component: ChomeComponent },
   { path: 'socite-home', component: ShomeComponent },
-  { path: 'Company', component: HeaderCompanyComponent },
-  { path: 'Candidat', component: HeaderCondidatComponent },
+  { path: 'Company', component: HeaderCompanyComponent, canActivate: [AuthGuardService] },
+  { path: 'Candidat', component: HeaderCondidatComponent, canActivate: [AuthGuardCaService] },
   { path: 'main-visitor', component: MainVisiteurComponent },
-  { path: 'annonce', component: AnnonceComponent },
+  { path: 'annonce', component: AnnonceComponent, canActivate: [AuthGuardService] },
   { path: 'Candidat/profile/:id', component: ProfilComponent }
 
 ];

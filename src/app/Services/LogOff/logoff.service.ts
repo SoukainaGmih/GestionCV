@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LogoffService {
   constructor() { }
-  private loggedIn = new BehaviorSubject<boolean>(true);
+  private loggedIn = new BehaviorSubject<boolean>(false);
   isLoggedIn$ = this.loggedIn.asObservable();
 
   get isLoggedIn(): boolean {

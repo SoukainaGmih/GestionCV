@@ -17,5 +17,5 @@ export interface Candidat {
     skills: string[],
     imageUrl: string,
     title: string,
-    pays: string,
+    pays: string
 }

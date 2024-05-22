@@ -25,199 +25,6 @@
       "imageUrl": "/assets/societes/00000449.png",
       "title": "Senior Developer",
       "pays": "USA"
-    },
-    {
-      "id": "1",
-      "name": "EL MALKI Zineb",
-      "email": "zinebelmalki@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "Java",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "Beginner"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "name": "GMIH Soukain",
-      "email": "gmihsoukaina@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        ".Net",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": ".net",
-          "level": "Beginner"
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "name": "HADDOUDI Abdelkarim",
-      "email": "abdelkarimhaddoudi@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "JAVA",
-        "Angular",
-        "python"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Egypt",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "Beginner"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "name": "EL MALKI Zineb",
-      "email": "zinebelmalki@gmail.com",
-      "title": "full stack developer",
-      "technologies": [
-        "Java",
-        "Angular"
-      ],
-      "imageUrl": "/assets/societes/00000449.png",
-      "pays": "Maroc",
-      "role": "candidate",
-      "skills": [
-        {
-          "id": "1",
-          "title": "Java",
-          "level": "advanced"
-        }
-      ]
-    },
-    {
-      "id": "0416",
-      "name": "test",
-      "email": "test5@gmail.com",
-      "password": "",
-      "role": "candidate"
-    },
-    {
-      "name": "",
-      "email": "test8@gmail.com",
-      "password": "0000",
-      "role": "candidate",
-      "id": "b0Rkne2"
-    },
-    {
-      "name": "test",
-      "email": "soukaina12@gmail.com",
-      "password": "0000",
-      "role": "candidate",
-      "id": "iSlLqot"
-    },
-    {
-      "name": "test",
-      "email": "soukaina287@gmail.com",
-      "password": "0909",
-      "role": "candidate",
-      "id": "r9dztmD"
-    },
-    {
-      "name": "test",
-      "email": "test27@gmail.com",
-      "password": "0000",
-      "role": "candidate",
-      "id": "EEqfyx5"
-    },
-    {
-      "name": "test",
-      "email": "test254@gmail.com",
-      "password": "999",
-      "role": "candidate",
-      "id": "YIW8z-h"
-    },
-    {
-      "name": "user",
-      "email": "user@gmail.com",
-      "password": "0000",
-      "role": "candidate",
-      "id": "LjHL_ej"
-    },
-    {
-      "id": "TFeGzht",
-      "civility": "",
-      "firstName": "",
-      "lastName": "",
-      "country": "",
-      "email": "",
-      "phone": "",
-      "password": "",
-      "confirmPassword": "",
-      "educationLevel": "",
-      "experience": "",
-      "trainingType": "",
-      "jobTitle": "",
-      "resumeAttachmentPath": "",
-      "linkedinProfile": "",
-      "skills": [],
-      "imageUrl": "",
-      "title": "",
-      "pays": ""
-    },
-    {
-      "id": "vNQmN_n",
-      "civility": "",
-      "firstName": "",
-      "lastName": "",
-      "country": "",
-      "email": "",
-      "phone": "",
-      "password": "",
-      "confirmPassword": "",
-      "educationLevel": "",
-      "experience": "",
-      "trainingType": "",
-      "jobTitle": "",
-      "resumeAttachmentPath": "",
-      "linkedinProfile": "",
-      "skills": [],
-      "imageUrl": "",
-      "title": "",
-      "pays": ""
-    },
-    {
-      "id": "ZuV5LhO",
-      "civility": "",
-      "firstName": "",
-      "lastName": "",
-      "country": "",
-      "email": "",
-      "phone": "",
-      "password": "",
-      "confirmPassword": "",
-      "educationLevel": "",
-      "experience": "",
-      "trainingType": "",
-      "jobTitle": "",
-      "resumeAttachmentPath": "",
-      "linkedinProfile": "",
-      "skills": [],
-      "imageUrl": "",
-      "title": "",
-      "pays": ""
     }
   ],
   "companies": [
@@ -226,98 +33,31 @@
       "email": "info@techcorp.com",
       "role": "company",
       "industry": "Technology",
-      "id": "27d3"
+      "id": "27d3",
+      "password": "azertyuiop"
     },
     {
       "name": "Marketing Solutions Ltd.",
       "email": "contact@marketingsolutions.com",
       "role": "company",
       "industry": "Marketing",
-      "id": "f80f"
+      "id": "f80f",
+      "password": "azertyuiop"
     },
     {
       "name": "Finance First Inc.",
       "email": "support@financefirst.com",
       "role": "company",
       "industry": "Finance",
-      "id": "3421"
+      "id": "3421",
+      "password": "azertyuiop"
     },
     {
-      "id": "65a6",
-      "name": "",
-      "email": "soukaina2387@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "id": "2888",
-      "name": "test",
-      "email": "test2@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "id": "dea2",
       "name": "test",
       "email": "test3@gmail.com",
-      "password": "",
-      "role": "company"
-    },
-    {
-      "name": "test",
-      "email": "test7@gmail.com",
       "password": "0000",
       "role": "company",
-      "id": "vRwyDGo"
-    },
-    {
-      "name": "test",
-      "email": "test31@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "GnKJ29G"
-    },
-    {
-      "name": "test",
-      "email": "test13@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "-tJdD27"
-    },
-    {
-      "name": "test",
-      "email": "test21@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "ZBrULf0"
-    },
-    {
-      "name": "test",
-      "email": "test22@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "C4PEG19"
-    },
-    {
-      "name": "test",
-      "email": "test26@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "-pRFqz3"
-    },
-    {
-      "name": "test",
-      "email": "test25@gmail.com",
-      "password": "9090",
-      "role": "company",
-      "id": "wwisO1P"
-    },
-    {
-      "name": "test",
-      "email": "test23@gmail.com",
-      "password": "0000",
-      "role": "company",
-      "id": "y-m-ULF"
+      "id": "dMCKhfQ"
     }
   ],
   "annonce": [
@@ -331,7 +71,7 @@
       "societename": "societe name"
     },
     {
-      "id": "2cfa",
+      "id": "2",
       "title": "java developer",
       "description": "java developer description",
       "technology": "java",
@@ -341,7 +81,7 @@
       "societename": "jobintech"
     },
     {
-      "id": "1958",
+      "id": "3",
       "title": "data analyst",
       "description": "data analyst description",
       "technology": "python, sql ",
@@ -351,7 +91,7 @@
       "societename": "capgemini"
     },
     {
-      "id": "5f4d",
+      "id": "4",
       "title": "cyber security ",
       "description": "In-depth reports covering a specific cybersecurity issue.",
       "technology": "python",
@@ -362,29 +102,5 @@
     }
   ],
   "loggedUser": {
-    "id": "11",
-    "civility": "Mr.",
-    "firstName": "John",
-    "lastName": "Doe",
-    "country": "USA",
-    "email": "john.doe@example.com",
-    "phone": "+1 123 456 7890",
-    "password": "securepassword",
-    "confirmPassword": "securepassword",
-    "educationLevel": "Bachelor's Degree",
-    "experience": "5 years",
-    "trainingType": "Full-time",
-    "jobTitle": "Software Engineer",
-    "resumeAttachmentPath": "/path/to/resume.pdf",
-    "linkedinProfile": "https://www.linkedin.com/in/johndoe",
-    "skills": [
-      "JavaScript",
-      "Angular",
-      "TypeScript",
-      "Node.js"
-    ],
-    "imageUrl": "/assets/societes/00000449.png",
-    "title": "Senior Developer",
-    "pays": "USA"
   }
 }
