@@ -5,6 +5,8 @@ import { LogoffService } from '../../Services/LogOff/logoff.service';
 import { AuthService } from '../../Services/Auth/auth.service';
 import { AnnoncesService } from '../../Services/Annonces/annonces.service';
 import { SearchService } from '../../Services/Search/search.service';
+import { Annonce } from '../../Models/annonce.model';
+
 
 @Component({
   selector: 'app-header',
@@ -19,9 +21,9 @@ export class HeaderComponent implements OnInit {
   isLoggedIn: boolean = false;
   loggedUser: any;
 
+
   ngOnInit() {
     this.onWindowScroll();
-
     this.items = [
       {
         label: 'File',

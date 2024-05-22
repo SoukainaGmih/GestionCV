@@ -1,9 +1,11 @@
+
 <div *ngIf="candidateInfo">
   <h2>Candidate Information</h2>
   <p><strong>Name:</strong> {{ candidateInfo }}</p>
   <p><strong>Email:</strong> {{ candidateInfo.email }}</p>
   <p><strong>Phone:</strong> {{ candidateInfo.phone }}</p>
 </div>
+
   <div *ngIf="!candidateInfo">
     <p>No candidate information found for the logged-in user.</p>
   </div>
